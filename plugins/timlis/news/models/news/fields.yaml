@@ -1,0 +1,62 @@
+fields:
+    title:
+        label: Заголовок
+        oc.commentPosition: ''
+        span: left
+        placeholder: 'Введите заголовок новости'
+        type: text
+    slug:
+        label: 'Имя в URL'
+        oc.commentPosition: ''
+        span: right
+        placeholder: 'Заполнится при заполнении заголовка'
+        preset:
+            field: title
+            type: slug
+        type: text
+    attachments:
+        label: 'Загрузить изображение'
+        oc.commentPosition: ''
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        type: fileupload
+    author:
+        label: 'Автор новости'
+        oc.commentPosition: ''
+        span: full
+        placeholder: Автор
+        type: text
+    anallytics:
+        label: Аналитики
+        oc.commentPosition: ''
+        span: full
+        placeholder: 'Введите ФИО аналитиков через запятую'
+        type: text
+    links:
+        label: Ссылки
+        oc.commentPosition: ''
+        span: full
+        placeholder: 'Введите ссылки через пробел'
+        type: text
+    category:
+        label: Категория
+        oc.commentPosition: ''
+        nameFrom: title
+        descriptionFrom: description
+        span: full
+        type: relation
+    content:
+        label: 'Содержимое новости'
+        size: ''
+        oc.commentPosition: ''
+        span: full
+        type: richeditor
+    publish:
+        label: Опубликовать
+        span: auto
+        default: 1
+        type: switch

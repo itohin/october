@@ -1,0 +1,13 @@
+columns:
+    id:
+        label: №
+        type: number
+        searchable: true
+    created_at:
+        label: Год
+        type: date
+        sortable: true
+    title:
+        label: Заголовок
+        type: text
+        searchable: true

@@ -1,0 +1,16 @@
+fields:
+    title:
+        label: Тег
+        oc.commentPosition: ''
+        span: left
+        placeholder: 'Введите тег'
+        type: text
+    slug:
+        label: 'Имя в URL'
+        oc.commentPosition: ''
+        span: right
+        placeholder: 'Заполняется автоматически'
+        preset:
+            field: title
+            type: slug
+        type: text

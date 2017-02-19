@@ -1,0 +1,11 @@
+title: Tag
+modelClass: Timlis\News\Models\Tag
+list: $/timlis/news/models/tag/columns.yaml
+recordUrl: 'timlis/news/tag/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

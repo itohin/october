@@ -1,0 +1,24 @@
+plugin:
+    name: Сайт
+    description: 'Управление содержимым страниц сайта'
+    author: timlis
+    icon: oc-icon-newspaper-o
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Сайт
+        url: timlis/news/news
+        icon: icon-folder
+        sideMenu:
+            side-menu-item:
+                label: Новости
+                url: timlis/news/news
+                icon: icon-newspaper-o
+            side-menu-item2:
+                label: Категории
+                url: timlis/news/category
+                icon: icon-bars
+            side-menu-item3:
+                label: Интересное
+                url: timlis/news/interest
+                icon: icon-star

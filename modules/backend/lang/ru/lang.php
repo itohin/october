@@ -161,12 +161,12 @@ return [
         'remove_file' => 'Удалить файл'
     ],
     'form' => [
-        'create_title' => 'Создание :name',
-        'update_title' => 'Редактирование :name',
-        'preview_title' => 'Предпросмотр :name',
-        'create_success' => ':name был успешно создан',
-        'update_success' => ':name был успешно сохранен',
-        'delete_success' => ':name был успешно удален',
+        'create_title' => 'Создание',
+        'update_title' => 'Редактирование',
+        'preview_title' => 'Предпросмотр',
+        'create_success' => 'Успешно создано',
+        'update_success' => 'Успешно сохранено',
+        'delete_success' => 'Успешно удалено',
         'missing_id' => 'Идентификатор формы записи не указан.',
         'missing_model' => 'Для формы используемой в :class не определена модель.',
         'missing_definition' => "Поведение формы не содержит поле для':field'.",

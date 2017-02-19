@@ -1,0 +1,11 @@
+list: $/timlis/news/models/category/columns.yaml
+modelClass: Timlis\News\Models\Category
+title: Category
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'Поиск'
+recordUrl: 'timlis/news/category/update/:id'

@@ -1,0 +1,4 @@
+title: News
+modelClass: Timlis\News\Models\News
+toolbar:
+    buttons: reorder_toolbar

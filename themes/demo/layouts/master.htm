@@ -1,0 +1,83 @@
+description = "Master layout"
+==
+<!DOCTYPE html>
+<html lang="RU">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <title>Timlis - {{ this.page.title }}</title>
+    <!-- OG-->
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="{{ this.page.title }}"/>
+    <meta property="og:description" content="{{ this.page.meta_description }}"/>
+    <!-- /OG-->
+    <!-- Favicon-->
+    <!-- /Favicon-->
+    <!-- Styles-->
+    <link href="{{ 'assets/css/styles.css'|theme }}" rel="stylesheet">
+    <!-- /Styles-->
+    <!-- JS Head-->
+    <script src="{{ 'assets/vendor/common.js'|theme }}"></script>
+    <script src="{{ 'assets/vendor/home.js'|theme }}"></script>
+    <!-- /JS Head-->
+  </head>
+  <body>
+      
+      {% partial 'master/header' %}
+      
+      <div class="home-lt__main">
+        <div class="home-lt__abs js-ps-scroll">
+          <div class="home-lt__pseudocol"></div>
+          <div class="home-lt__pseudocol"></div>
+          <div class="home-lt__pseudocol"></div>
+          <div class="home-lt__pseudocol"></div>
+          <!-- slick-->
+          <div class="home-slick-title">
+            <div>
+              <h3 class="home-slick-title__h3">управление ресурсами промышленного предприятия</h3>
+            </div>
+            <div>
+              <h3 class="home-slick-title__h3">управление финансами</h3>
+            </div>
+            <div>
+              <h3 class="home-slick-title__h3">управление запасами</h3>
+            </div>
+            <div>
+              <h3 class="home-slick-title__h3">управление имуществом</h3>
+            </div>
+            <div>
+              <h3 class="home-slick-title__h3">управление ПЕРСОНАЛОМ</h3>
+            </div>
+          </div>
+          <div class="home-slick-image">
+            <div>
+              <div class="parallax-wrapper"><img src="{{ 'assets/img/sld.jpg'|theme }}" alt="" class="home-slick-image__img"></div>
+            </div>
+            <div>
+              <div class="parallax-wrapper"><img src="{{ 'assets/img/sld2.jpg'|theme }}" alt="" class="home-slick-image__img"></div>
+            </div>
+            <div>
+              <div class="parallax-wrapper"><img src="{{ 'assets/img/sld3.jpg'|theme }}" alt="" class="home-slick-image__img"></div>
+            </div>
+            <div>
+              <div class="parallax-wrapper"><img src="{{ 'assets/img/sld4.jpg'|theme }}" alt="" class="home-slick-image__img"></div>
+            </div>
+            <div>
+              <div class="parallax-wrapper"><img src="{{ 'assets/img/sld5.jpg'|theme }}" alt="" class="home-slick-image__img"></div>
+            </div>
+          </div>
+          <!-- support--><a href="" class="home-support-btn btn-default _razzmatazz"><span>Сопровождение</span><img src="{{ 'assets/img/t_arrow_white.svg'|theme }}"></a>
+          <div class="home-support-image">
+            <div class="parallax-wrapper-small"><img src="{{ 'assets/img/depositphotos.jpg'|theme }}" alt=""></div>
+          </div>
+        </div>
+
+        {% partial 'master/news_sidebar' %}
+       
+    <!-- JS Bottom-->
+    <!-- /JS Bottom-->
+  </body>
+</html>

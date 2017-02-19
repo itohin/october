@@ -1,0 +1,12 @@
+fields:
+    title:
+        label: 'Название категории'
+        oc.commentPosition: ''
+        span: full
+        type: text
+    description:
+        label: 'Описание категории'
+        size: ''
+        oc.commentPosition: ''
+        span: full
+        type: textarea

@@ -1,0 +1,10 @@
+name: Category
+form: $/timlis/news/models/category/fields.yaml
+modelClass: Timlis\News\Models\Category
+defaultRedirect: timlis/news/category
+create:
+    redirect: 'timlis/news/category/update/:id'
+    redirectClose: timlis/news/category
+update:
+    redirect: timlis/news/category
+    redirectClose: timlis/news/category

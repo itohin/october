@@ -1,0 +1,4 @@
+title: Interest
+modelClass: Timlis\News\Models\Interest
+toolbar:
+    buttons: reorder_toolbar

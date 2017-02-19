@@ -1,0 +1,10 @@
+name: Tag
+form: $/timlis/news/models/tag/fields.yaml
+modelClass: Timlis\News\Models\Tag
+defaultRedirect: timlis/news/tag
+create:
+    redirect: 'timlis/news/tag/update/:id'
+    redirectClose: timlis/news/tag
+update:
+    redirect: timlis/news/tag
+    redirectClose: timlis/news/tag

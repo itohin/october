@@ -1,0 +1,11 @@
+name: News
+modelClass: Timlis\News\Models\News
+form: $/timlis/news/models/news/fields.yaml
+defaultRedirect: timlis/news/news
+create:
+    redirect: 'timlis/news/news/update/:id'
+    redirectClose: timlis/news/news
+update:
+    redirect: timlis/news/news
+    redirectClose: timlis/news/news
+preview: {  }

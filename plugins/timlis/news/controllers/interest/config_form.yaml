@@ -1,0 +1,10 @@
+name: Interest
+form: $/timlis/news/models/interest/fields.yaml
+modelClass: Timlis\News\Models\Interest
+defaultRedirect: timlis/news/interest
+create:
+    redirect: 'timlis/news/interest/update/:id'
+    redirectClose: timlis/news/interest
+update:
+    redirect: timlis/news/interest
+    redirectClose: timlis/news/interest
