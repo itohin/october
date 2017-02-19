@@ -69,3 +69,6 @@
 1.0.24:
     - 'Updated table timlis_news_tags'
     - builder_table_update_timlis_news_tags.php
+1.0.25:
+    - 'Seed news'
+    - seed.php
