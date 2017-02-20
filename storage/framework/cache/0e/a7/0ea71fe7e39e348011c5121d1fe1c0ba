@@ -1,0 +1,59 @@
+1487567472a:1:{s:15:"site/header.htm";a:5:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:5946:"    <div class="home-lt menu-position0 js-menu">
+      <!-- menu-->
+      <div class="menu-lvl0"><a href="" class="menu-lvl0__logo"><img src="{{ 'assets/img/logo.png'|theme }}" alt="logo"></a>
+        <nav class="menu-lvl0__nav"><a data-nav-id="about" href="" class="menu-lvl0__a _arrow [ js-lvl0 ]">О компании</a><a data-nav-id="about2" href="" class="menu-lvl0__a _arrow [ js-lvl0 ]">Направления</a><a data-nav-id="about" href="" class="menu-lvl0__a _arrow [ js-lvl0 ]">Поставщики</a><a data-nav-id="about2" href="" class="menu-lvl0__a _arrow [ js-lvl0 ]">Отрасли</a><a data-nav-id="about" href="" class="menu-lvl0__a _arrow [ js-lvl0 ]">Заказчики</a><a href="" class="menu-lvl0__a">Сопровождение</a><a href="" class="menu-lvl0__a">Контакты</a></nav>
+      </div>
+      <div data-nav-ref="about" class="menu-lvl1">
+        <div class="menu-lvl__abs js-ps-scroll">
+          <nav class="menu-lvl1__nav"><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Acme Packet</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">AnyData</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">APC by Schneider</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Arbor Networks</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Avanpost</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Acme Packet</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">AnyData</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">APC by Schneider</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Arbor Networks</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Avanpost</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Acme Packet</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">AnyData</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">APC by Schneider</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Arbor Networks</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Avanpost</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Acme Packet</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">AnyData</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">APC by Schneider</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Arbor Networks</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Avanpost</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Acme Packet</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">AnyData</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">APC by Schneider</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Arbor Networks</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Avanpost</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Acme Packet</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">AnyData</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">APC by Schneider</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Arbor Networks</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Avanpost</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Acme Packet</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">AnyData</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">APC by Schneider</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Arbor Networks</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Avanpost</a>
+          </nav>
+        </div>
+      </div>
+      <div data-nav-ref="any" class="menu-lvl2">
+        <div class="menu-lvl__abs js-ps-scroll">
+          <nav class="menu-lvl2__nav"><a href="" class="menu-lvl2__a">Интеграционные платформы</a><a href="" class="menu-lvl2__a">Подход к формированию типовых решений</a><a href="" class="menu-lvl2__a">Специализированные и интегрированные решения по телефонии</a><a href="" class="menu-lvl2__a">Интеграционные платформы</a><a href="" class="menu-lvl2__a">Подход к формированию типовых решений</a><a href="" class="menu-lvl2__a">Интеграционные платформы</a><a href="" class="menu-lvl2__a">Подход к формированию типовых решений</a><a href="" class="menu-lvl2__a">Специализированные и интегрированные решения по телефонии</a><a href="" class="menu-lvl2__a">Интеграционные платформы</a><a href="" class="menu-lvl2__a">Подход к формированию типовых решений</a><a href="" class="menu-lvl2__a">Интеграционные платформы</a><a href="" class="menu-lvl2__a">Подход к формированию типовых решений</a><a href="" class="menu-lvl2__a">Специализированные и интегрированные решения по телефонии</a><a href="" class="menu-lvl2__a">Интеграционные платформы</a><a href="" class="menu-lvl2__a">Подход к формированию типовых решений</a>
+          </nav>
+        </div>
+      </div>
+      <div data-nav-ref="about2" class="menu-lvl1">
+        <div class="menu-lvl__abs">
+          <nav class="menu-lvl1__nav"><a data-nav-id="any2" href="" class="menu-lvl1__a [ js-lvl1 ]">link 0</a>
+          </nav>
+        </div>
+      </div>
+      <div data-nav-ref="any2" class="menu-lvl2">
+        <div class="menu-lvl__abs">
+          <nav class="menu-lvl2__nav"><a href="" class="menu-lvl2__a">link 1</a>
+          </nav>
+        </div>
+      </div>
+      <!-- /menu-->";s:5:"mtime";i:1487524359;s:6:"markup";s:5942:"<div class="home-lt menu-position0 js-menu">
+      <!-- menu-->
+      <div class="menu-lvl0"><a href="" class="menu-lvl0__logo"><img src="{{ 'assets/img/logo.png'|theme }}" alt="logo"></a>
+        <nav class="menu-lvl0__nav"><a data-nav-id="about" href="" class="menu-lvl0__a _arrow [ js-lvl0 ]">О компании</a><a data-nav-id="about2" href="" class="menu-lvl0__a _arrow [ js-lvl0 ]">Направления</a><a data-nav-id="about" href="" class="menu-lvl0__a _arrow [ js-lvl0 ]">Поставщики</a><a data-nav-id="about2" href="" class="menu-lvl0__a _arrow [ js-lvl0 ]">Отрасли</a><a data-nav-id="about" href="" class="menu-lvl0__a _arrow [ js-lvl0 ]">Заказчики</a><a href="" class="menu-lvl0__a">Сопровождение</a><a href="" class="menu-lvl0__a">Контакты</a></nav>
+      </div>
+      <div data-nav-ref="about" class="menu-lvl1">
+        <div class="menu-lvl__abs js-ps-scroll">
+          <nav class="menu-lvl1__nav"><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Acme Packet</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">AnyData</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">APC by Schneider</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Arbor Networks</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Avanpost</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Acme Packet</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">AnyData</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">APC by Schneider</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Arbor Networks</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Avanpost</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Acme Packet</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">AnyData</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">APC by Schneider</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Arbor Networks</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Avanpost</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Acme Packet</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">AnyData</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">APC by Schneider</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Arbor Networks</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Avanpost</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Acme Packet</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">AnyData</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">APC by Schneider</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Arbor Networks</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Avanpost</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Acme Packet</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">AnyData</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">APC by Schneider</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Arbor Networks</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Avanpost</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Acme Packet</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">AnyData</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">APC by Schneider</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Arbor Networks</a><a data-nav-id="any" href="" class="menu-lvl1__a [ js-lvl1 ]">Avanpost</a>
+          </nav>
+        </div>
+      </div>
+      <div data-nav-ref="any" class="menu-lvl2">
+        <div class="menu-lvl__abs js-ps-scroll">
+          <nav class="menu-lvl2__nav"><a href="" class="menu-lvl2__a">Интеграционные платформы</a><a href="" class="menu-lvl2__a">Подход к формированию типовых решений</a><a href="" class="menu-lvl2__a">Специализированные и интегрированные решения по телефонии</a><a href="" class="menu-lvl2__a">Интеграционные платформы</a><a href="" class="menu-lvl2__a">Подход к формированию типовых решений</a><a href="" class="menu-lvl2__a">Интеграционные платформы</a><a href="" class="menu-lvl2__a">Подход к формированию типовых решений</a><a href="" class="menu-lvl2__a">Специализированные и интегрированные решения по телефонии</a><a href="" class="menu-lvl2__a">Интеграционные платформы</a><a href="" class="menu-lvl2__a">Подход к формированию типовых решений</a><a href="" class="menu-lvl2__a">Интеграционные платформы</a><a href="" class="menu-lvl2__a">Подход к формированию типовых решений</a><a href="" class="menu-lvl2__a">Специализированные и интегрированные решения по телефонии</a><a href="" class="menu-lvl2__a">Интеграционные платформы</a><a href="" class="menu-lvl2__a">Подход к формированию типовых решений</a>
+          </nav>
+        </div>
+      </div>
+      <div data-nav-ref="about2" class="menu-lvl1">
+        <div class="menu-lvl__abs">
+          <nav class="menu-lvl1__nav"><a data-nav-id="any2" href="" class="menu-lvl1__a [ js-lvl1 ]">link 0</a>
+          </nav>
+        </div>
+      </div>
+      <div data-nav-ref="any2" class="menu-lvl2">
+        <div class="menu-lvl__abs">
+          <nav class="menu-lvl2__nav"><a href="" class="menu-lvl2__a">link 1</a>
+          </nav>
+        </div>
+      </div>
+      <!-- /menu-->";s:4:"code";N;}}

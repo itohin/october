@@ -1,0 +1,346 @@
+1487567815a:1:{s:8:"home.htm";a:11:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:11366:"title = "Главная"
+url = "/"
+layout = "master"
+description = "Главная страница"
+is_hidden = 0
+
+[builderList]
+modelClass = "Timlis\News\Models\News"
+scope = "-"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "home"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+recordsPerPage = 4
+pageNumber = "{{ :page }}"
+==
+{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+
+<div class="home-lt__main">
+        <div class="home-lt__abs js-ps-scroll">
+          <div class="home-lt__pseudocol"></div>
+          <div class="home-lt__pseudocol"></div>
+          <div class="home-lt__pseudocol"></div>
+          <div class="home-lt__pseudocol"></div>
+          <!-- slick-->
+
+
+          <div class="home-slick-title">
+            <div>
+              <h3 class="home-slick-title__h3">управление ресурсами промышленного предприятия</h3>
+            </div>
+            <div>
+              <h3 class="home-slick-title__h3">управление финансами</h3>
+            </div>
+            <div>
+              <h3 class="home-slick-title__h3">управление запасами</h3>
+            </div>
+            <div>
+              <h3 class="home-slick-title__h3">управление имуществом</h3>
+            </div>
+            <div>
+              <h3 class="home-slick-title__h3">управление ПЕРСОНАЛОМ</h3>
+            </div>
+          </div>
+          <div class="home-slick-image">
+            <div>
+              <div class="parallax-wrapper"><img src="{{ 'assets/img/home/sld.jpg'|theme }}" alt="" class="home-slick-image__img"></div>
+            </div>
+            <div>
+              <div class="parallax-wrapper"><img src="{{ 'assets/img/home/sld2.jpg'|theme }}" alt="" class="home-slick-image__img"></div>
+            </div>
+            <div>
+              <div class="parallax-wrapper"><img src="{{ 'assets/img/home/sld3.jpg'|theme }}" alt="" class="home-slick-image__img"></div>
+            </div>
+            <div>
+              <div class="parallax-wrapper"><img src="{{ 'assets/img/home/sld4.jpg'|theme }}" alt="" class="home-slick-image__img"></div>
+            </div>
+            <div>
+              <div class="parallax-wrapper"><img src="{{ 'assets/img/home/sld5.jpg'|theme }}" alt="" class="home-slick-image__img"></div>
+            </div>
+          </div>
+          <!-- support--><a href="" class="home-support-btn btn-default _razzmatazz"><span>Сопровождение</span><img src="{{ 'assets/img/home/t_arrow_white.svg'|theme }}"></a>
+          <div class="home-support-image">
+            <div class="parallax-wrapper-small"><img src="{{ 'assets/img/home/depositphotos.jpg'|theme }}" alt=""></div>
+          </div>
+        </div>
+        <!-- news-->
+        <div data-news-id="newsall" class="home-lt__news-content">
+          <div class="news-all">
+            <div class="news-all-h2">НОВОСТИ</div>
+            <ul class="news-all-ul">
+              <li class="news-all-li">
+                <div class="news-all-milstone _start"><span class="news-all-milstone__year">2016</span><span class="news-all-milstone__pin"></span></div>
+              </li>
+              <li class="news-all-li">
+                <article class="news-all-article"><a href="" class="news-all-article__a">
+                    <div class="news-all-article__colL">
+                      <div class="news-all-article__date">21.12</div>
+                      <h3 class="news-all-article__h3">ТИМЛИС представил новую облачную платформу – T.Cloud</h3>
+                      <p class="news-all-article__p">Компания «Техносерв» объявляет о запуске нового направления бизнеса — облачного платформы. Компания «Техносерв» объявляет о запуске нового направления бизнеса — облачного платформы</p>
+                      <button class="home-news-btn _newsall"><span>Подробнее</span><img src="{{ 'assets/img/home/t_arrow.svg'|theme }}"></button>
+                    </div>
+                    <div class="news-all-article__colR"><img src="{{ 'assets/img/news-all/photo-1.jpg'|theme }}" alt="image" class="news-all-article__img"></div></a></article>
+              </li>
+              <li class="news-all-li">
+                <article class="news-all-article"><a href="" class="news-all-article__a">
+                    <div class="news-all-article__colL">
+                      <div class="news-all-article__date">07.10</div>
+                      <h3 class="news-all-article__h3">ТИМЛИС представил новую облачную платформу – T.Cloud</h3>
+                      <p class="news-all-article__p">Компания «Техносерв» объявляет о запуске нового направления бизнеса — облачного платформы. Компания «Техносерв» объявляет о запуске нового направления бизнеса — облачного платформы</p>
+                      <button class="home-news-btn _newsall"><span>Подробнее</span><img src="{{ 'assets/img/home/t_arrow.svg'|theme }}"></button>
+                    </div>
+                    <div class="news-all-article__colR"><img src="{{ 'assets/img/news-all/photo-2.jpg'|theme }}" alt="image" class="news-all-article__img"></div></a></article>
+              </li>
+              <li class="news-all-li">
+                <div class="news-all-milstone _middle"><span class="news-all-milstone__year">2015</span><span class="news-all-milstone__pin"></span></div>
+              </li>
+              <li class="news-all-li">
+                <article class="news-all-article"><a href="" class="news-all-article__a">
+                    <div class="news-all-article__colL">
+                      <div class="news-all-article__date">07.10</div>
+                      <h3 class="news-all-article__h3">ТИМЛИС представил новую облачную платформу – T.Cloud</h3>
+                      <p class="news-all-article__p">Компания «Техносерв» объявляет о запуске нового направления бизнеса — облачного платформы. Компания «Техносерв» объявляет о запуске нового направления бизнеса — облачного платформы</p>
+                      <button class="home-news-btn _newsall"><span>Подробнее</span><img src="{{ 'assets/img/home/t_arrow.svg'|theme }}"></button>
+                    </div>
+                    <div class="news-all-article__colR"><img src="{{ 'assets/img/news-all/photo-3.jpg'|theme }}" alt="image" class="news-all-article__img"></div></a></article>
+              </li>
+              <li class="news-all-li">
+                <div class="news-all-milstone _end"><span class="news-all-milstone__year">2014</span><span class="news-all-milstone__pin"></span></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- /news-->
+      </div>
+
+
+	<div class="home-lt__news-all js-ps-scroll">
+        <h2 class="home-news-h2">НОВОСТИ</h2>
+    {% for record in records %}
+        <article class="home-news-article">
+            {# Use spaceless tag to remove spaces inside the A tag. #}
+            {% spaceless %}
+                {% if detailsPage %}
+                    <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}" class="home-news-article__a">
+                {% endif %}
+
+                <h2 class="home-news-article__h2">{{ record.title }}</h2>
+
+                <p class="home-news-article__p">{{ html_limit(record.content , 150) | raw }} ...</p>
+
+                <p class="home-news-article__date">{{ record.created_at.format('d.m.Y') }}</p>
+
+                {% if detailsPage %}
+                    </a>
+                {% endif %}
+            {% endspaceless %}
+        </article>
+    {% else %}
+        <article class="no-data">{{ noRecordsMessage }}</article>
+    {% endfor %}
+
+
+{% if records.lastPage > 1 %}
+
+	<a href="" data-news-target="newsall" class="home-news-btn _home js-openNewsAll"><span>Все новости</span><img src="{{ 'assets/img/home/t_arrow.svg'|theme }}"></a>
+    
+{% endif %}
+
+</div>
+
+
+
+      <!-- <div class="home-lt__news-all js-ps-scroll">
+        <h2 class="home-news-h2">НОВОСТИ</h2>
+        <article class="home-news-article"><a href="" class="home-news-article__a">
+            <h2 class="home-news-article__h2">ТИМЛИС представил новую облачную платформу – T.Cloud</h2>
+            <p class="home-news-article__p">Компания «Техносерв» объявляет о запуске нового направления бизнеса — облачного  ...</p>
+            <p class="home-news-article__date">11.11.2016</p></a></article>
+        <article class="home-news-article"><a href="" class="home-news-article__a">
+            <h2 class="home-news-article__h2">ТИМЛИС представил новую облачную платформу – T.Cloud</h2>
+            <p class="home-news-article__p">Компания «Техносерв» объявляет о запуске нового направления бизнеса — облачного  ...</p>
+            <p class="home-news-article__date">11.11.2016</p></a></article>
+        <article class="home-news-article"><a href="" class="home-news-article__a">
+            <h2 class="home-news-article__h2">ТИМЛИС представил новую облачную платформу – T.Cloud</h2>
+            <p class="home-news-article__p">Компания «Техносерв» объявляет о запуске нового направления бизнеса — облачного  ...</p>
+            <p class="home-news-article__date">11.11.2016</p></a></article>
+        <article class="home-news-article"><a href="" class="home-news-article__a">
+            <h2 class="home-news-article__h2">ТИМЛИС представил новую облачную платформу – T.Cloud</h2>
+            <p class="home-news-article__p">Компания «Техносерв» объявляет о запуске нового направления бизнеса — облачного  ...</p>
+            <p class="home-news-article__date">11.11.2016</p></a></article>
+            <a href="" data-news-target="newsall" class="home-news-btn _home js-openNewsAll"><span>Все новости</span><img src="{{ 'assets/img/home/t_arrow.svg'|theme }}"></a>
+      </div> -->
+    </div>
+    <!-- JS Bottom-->
+    <!-- /JS Bottom-->";s:5:"mtime";i:1487567213;s:6:"markup";s:10981:"{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+
+<div class="home-lt__main">
+        <div class="home-lt__abs js-ps-scroll">
+          <div class="home-lt__pseudocol"></div>
+          <div class="home-lt__pseudocol"></div>
+          <div class="home-lt__pseudocol"></div>
+          <div class="home-lt__pseudocol"></div>
+          <!-- slick-->
+
+
+          <div class="home-slick-title">
+            <div>
+              <h3 class="home-slick-title__h3">управление ресурсами промышленного предприятия</h3>
+            </div>
+            <div>
+              <h3 class="home-slick-title__h3">управление финансами</h3>
+            </div>
+            <div>
+              <h3 class="home-slick-title__h3">управление запасами</h3>
+            </div>
+            <div>
+              <h3 class="home-slick-title__h3">управление имуществом</h3>
+            </div>
+            <div>
+              <h3 class="home-slick-title__h3">управление ПЕРСОНАЛОМ</h3>
+            </div>
+          </div>
+          <div class="home-slick-image">
+            <div>
+              <div class="parallax-wrapper"><img src="{{ 'assets/img/home/sld.jpg'|theme }}" alt="" class="home-slick-image__img"></div>
+            </div>
+            <div>
+              <div class="parallax-wrapper"><img src="{{ 'assets/img/home/sld2.jpg'|theme }}" alt="" class="home-slick-image__img"></div>
+            </div>
+            <div>
+              <div class="parallax-wrapper"><img src="{{ 'assets/img/home/sld3.jpg'|theme }}" alt="" class="home-slick-image__img"></div>
+            </div>
+            <div>
+              <div class="parallax-wrapper"><img src="{{ 'assets/img/home/sld4.jpg'|theme }}" alt="" class="home-slick-image__img"></div>
+            </div>
+            <div>
+              <div class="parallax-wrapper"><img src="{{ 'assets/img/home/sld5.jpg'|theme }}" alt="" class="home-slick-image__img"></div>
+            </div>
+          </div>
+          <!-- support--><a href="" class="home-support-btn btn-default _razzmatazz"><span>Сопровождение</span><img src="{{ 'assets/img/home/t_arrow_white.svg'|theme }}"></a>
+          <div class="home-support-image">
+            <div class="parallax-wrapper-small"><img src="{{ 'assets/img/home/depositphotos.jpg'|theme }}" alt=""></div>
+          </div>
+        </div>
+        <!-- news-->
+        <div data-news-id="newsall" class="home-lt__news-content">
+          <div class="news-all">
+            <div class="news-all-h2">НОВОСТИ</div>
+            <ul class="news-all-ul">
+              <li class="news-all-li">
+                <div class="news-all-milstone _start"><span class="news-all-milstone__year">2016</span><span class="news-all-milstone__pin"></span></div>
+              </li>
+              <li class="news-all-li">
+                <article class="news-all-article"><a href="" class="news-all-article__a">
+                    <div class="news-all-article__colL">
+                      <div class="news-all-article__date">21.12</div>
+                      <h3 class="news-all-article__h3">ТИМЛИС представил новую облачную платформу – T.Cloud</h3>
+                      <p class="news-all-article__p">Компания «Техносерв» объявляет о запуске нового направления бизнеса — облачного платформы. Компания «Техносерв» объявляет о запуске нового направления бизнеса — облачного платформы</p>
+                      <button class="home-news-btn _newsall"><span>Подробнее</span><img src="{{ 'assets/img/home/t_arrow.svg'|theme }}"></button>
+                    </div>
+                    <div class="news-all-article__colR"><img src="{{ 'assets/img/news-all/photo-1.jpg'|theme }}" alt="image" class="news-all-article__img"></div></a></article>
+              </li>
+              <li class="news-all-li">
+                <article class="news-all-article"><a href="" class="news-all-article__a">
+                    <div class="news-all-article__colL">
+                      <div class="news-all-article__date">07.10</div>
+                      <h3 class="news-all-article__h3">ТИМЛИС представил новую облачную платформу – T.Cloud</h3>
+                      <p class="news-all-article__p">Компания «Техносерв» объявляет о запуске нового направления бизнеса — облачного платформы. Компания «Техносерв» объявляет о запуске нового направления бизнеса — облачного платформы</p>
+                      <button class="home-news-btn _newsall"><span>Подробнее</span><img src="{{ 'assets/img/home/t_arrow.svg'|theme }}"></button>
+                    </div>
+                    <div class="news-all-article__colR"><img src="{{ 'assets/img/news-all/photo-2.jpg'|theme }}" alt="image" class="news-all-article__img"></div></a></article>
+              </li>
+              <li class="news-all-li">
+                <div class="news-all-milstone _middle"><span class="news-all-milstone__year">2015</span><span class="news-all-milstone__pin"></span></div>
+              </li>
+              <li class="news-all-li">
+                <article class="news-all-article"><a href="" class="news-all-article__a">
+                    <div class="news-all-article__colL">
+                      <div class="news-all-article__date">07.10</div>
+                      <h3 class="news-all-article__h3">ТИМЛИС представил новую облачную платформу – T.Cloud</h3>
+                      <p class="news-all-article__p">Компания «Техносерв» объявляет о запуске нового направления бизнеса — облачного платформы. Компания «Техносерв» объявляет о запуске нового направления бизнеса — облачного платформы</p>
+                      <button class="home-news-btn _newsall"><span>Подробнее</span><img src="{{ 'assets/img/home/t_arrow.svg'|theme }}"></button>
+                    </div>
+                    <div class="news-all-article__colR"><img src="{{ 'assets/img/news-all/photo-3.jpg'|theme }}" alt="image" class="news-all-article__img"></div></a></article>
+              </li>
+              <li class="news-all-li">
+                <div class="news-all-milstone _end"><span class="news-all-milstone__year">2014</span><span class="news-all-milstone__pin"></span></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- /news-->
+      </div>
+
+
+	<div class="home-lt__news-all js-ps-scroll">
+        <h2 class="home-news-h2">НОВОСТИ</h2>
+    {% for record in records %}
+        <article class="home-news-article">
+            {# Use spaceless tag to remove spaces inside the A tag. #}
+            {% spaceless %}
+                {% if detailsPage %}
+                    <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}" class="home-news-article__a">
+                {% endif %}
+
+                <h2 class="home-news-article__h2">{{ record.title }}</h2>
+
+                <p class="home-news-article__p">{{ html_limit(record.content , 150) | raw }} ...</p>
+
+                <p class="home-news-article__date">{{ record.created_at.format('d.m.Y') }}</p>
+
+                {% if detailsPage %}
+                    </a>
+                {% endif %}
+            {% endspaceless %}
+        </article>
+    {% else %}
+        <article class="no-data">{{ noRecordsMessage }}</article>
+    {% endfor %}
+
+
+{% if records.lastPage > 1 %}
+
+	<a href="" data-news-target="newsall" class="home-news-btn _home js-openNewsAll"><span>Все новости</span><img src="{{ 'assets/img/home/t_arrow.svg'|theme }}"></a>
+    
+{% endif %}
+
+</div>
+
+
+
+      <!-- <div class="home-lt__news-all js-ps-scroll">
+        <h2 class="home-news-h2">НОВОСТИ</h2>
+        <article class="home-news-article"><a href="" class="home-news-article__a">
+            <h2 class="home-news-article__h2">ТИМЛИС представил новую облачную платформу – T.Cloud</h2>
+            <p class="home-news-article__p">Компания «Техносерв» объявляет о запуске нового направления бизнеса — облачного  ...</p>
+            <p class="home-news-article__date">11.11.2016</p></a></article>
+        <article class="home-news-article"><a href="" class="home-news-article__a">
+            <h2 class="home-news-article__h2">ТИМЛИС представил новую облачную платформу – T.Cloud</h2>
+            <p class="home-news-article__p">Компания «Техносерв» объявляет о запуске нового направления бизнеса — облачного  ...</p>
+            <p class="home-news-article__date">11.11.2016</p></a></article>
+        <article class="home-news-article"><a href="" class="home-news-article__a">
+            <h2 class="home-news-article__h2">ТИМЛИС представил новую облачную платформу – T.Cloud</h2>
+            <p class="home-news-article__p">Компания «Техносерв» объявляет о запуске нового направления бизнеса — облачного  ...</p>
+            <p class="home-news-article__date">11.11.2016</p></a></article>
+        <article class="home-news-article"><a href="" class="home-news-article__a">
+            <h2 class="home-news-article__h2">ТИМЛИС представил новую облачную платформу – T.Cloud</h2>
+            <p class="home-news-article__p">Компания «Техносерв» объявляет о запуске нового направления бизнеса — облачного  ...</p>
+            <p class="home-news-article__date">11.11.2016</p></a></article>
+            <a href="" data-news-target="newsall" class="home-news-btn _home js-openNewsAll"><span>Все новости</span><img src="{{ 'assets/img/home/t_arrow.svg'|theme }}"></a>
+      </div> -->
+    </div>
+    <!-- JS Bottom-->
+    <!-- /JS Bottom-->";s:4:"code";N;s:5:"title";s:14:"Главная";s:3:"url";s:1:"/";s:6:"layout";s:6:"master";s:11:"description";s:31:"Главная страница";s:9:"is_hidden";s:1:"0";s:11:"builderList";a:9:{s:10:"modelClass";s:23:"Timlis\News\Models\News";s:5:"scope";s:1:"-";s:13:"displayColumn";s:5:"title";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:4:"home";s:16:"detailsKeyColumn";s:4:"slug";s:19:"detailsUrlParameter";s:4:"slug";s:14:"recordsPerPage";s:1:"4";s:10:"pageNumber";s:11:"{{ :page }}";}}}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="RU">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{{ this.page.description }}">
+    <title>Timlis - {{ this.page.title }}</title>
+    <!-- OG-->
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Timlis - {{ this.page.title }}"/>
+    <meta property="og:description" content="{{ this.page.description }}"/>
+    <!-- /OG-->
+    <!-- Favicon-->
+    <!-- /Favicon-->
+    <!-- Styles-->
+    <link rel="stylesheet" href="{{ 'assets/css/styles.css'|theme }}">
+    <!-- /Styles-->
+    <!-- JS Head-->
+    <script defer src="{{ 'assets/js/common.js'|theme }}"></script>
+    <script defer src="{{ 'assets/js/home.js'|theme }}"></script>
+    <!-- /JS Head-->
+  </head>
+  <body>
+    <!-- JS Top-->
+    <!-- /JS Top-->
+      {% partial 'site/header' %}
+      
+      {% page %}
+      
+  </body>
+</html>
