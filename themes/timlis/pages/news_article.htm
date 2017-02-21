@@ -1,0 +1,60 @@
+title = "Новость"
+url = "/news/:slug"
+layout = "master"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Timlis\News\Models\News"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "title"
+notFoundMessage = "Record not found"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+
+{% if record %}
+
+
+  
+<div class="lt__main _offset0 _scroll js-ps-scroll">
+    <div class="news-article">
+      <div class="news-article__colL"><img src="{{ record.attachments.path }}" class="news-article__prview">
+        <div class="news-article__wswg">{{ record.content | raw }}</div>
+      </div>
+      <div class="news-article__colR">
+        <h1 class="news-article__h1">{{ record.title }}</h1>
+        <div class="news-article-tags">
+          <div class="news-article-tags__colL">
+            <div class="news-article-tag"><span class="news-article-tag__prop">{{ record.created_at.format('d.m.Y') }}</span></div>
+          </div>
+          <div class="news-article-tags__colR">
+            <ul class="news-article-tags__ul">
+              <li class="news-article-tag"><span class="news-article-tag__prop">автор:</span><span class="news-article-tag__val">{{ record.author }}</span></li>
+              <li class="news-article-tag"><span class="news-article-tag__prop">аналитики:</span><span class="news-article-tag__val">{{ record.anallytics }}</span></li>
+              <li class="news-article-tag"><span class="news-article-tag__prop">ссылки на первоисточник:</span><span class="news-article-tag__val">{{ record.links }}</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="news-article-nav">
+          <div class="news-article-nav__rowA">
+          {% if record.nextSlug %}
+          	<a data-hover="Следующая новость" href="/news/{{ record.nextSlug }}"  class="news-article-next"></a>
+          {% endif %}
+
+          {% if record.prevSlug %}	
+          	<a data-hover="Предыдущая новость" href="/news/{{ record.prevSlug }}" class="news-article-prev"></a>
+          {% endif %}	
+          </div>
+          <div class="news-article-nav__rowB"><a href="" class="news-article-backlink"><img src="{{ 'assets/img/home/t_arrow.svg'|theme }}"><span>Назад к фильтру</span></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}

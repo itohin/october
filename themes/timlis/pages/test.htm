@@ -1,0 +1,153 @@
+title = "Главная"
+url = "/"
+layout = "master"
+description = "Главная страница"
+is_hidden = 0
+
+[builderList]
+modelClass = "Timlis\News\Models\News"
+scope = "-"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "news_article"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+recordsPerPage = 4
+pageNumber = "{{ :page }}"
+sortColumn = "created_at"
+sortDirection = "desc"
+==
+{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+
+<div class="home-lt__main">
+        <div class="home-lt__abs js-ps-scroll">
+          <div class="home-lt__pseudocol"></div>
+          <div class="home-lt__pseudocol"></div>
+          <div class="home-lt__pseudocol"></div>
+          <div class="home-lt__pseudocol"></div>
+          <!-- slick-->
+
+
+          <div class="home-slick-title">
+            <div>
+              <h3 class="home-slick-title__h3">управление ресурсами промышленного предприятия</h3>
+            </div>
+            <div>
+              <h3 class="home-slick-title__h3">управление финансами</h3>
+            </div>
+            <div>
+              <h3 class="home-slick-title__h3">управление запасами</h3>
+            </div>
+            <div>
+              <h3 class="home-slick-title__h3">управление имуществом</h3>
+            </div>
+            <div>
+              <h3 class="home-slick-title__h3">управление ПЕРСОНАЛОМ</h3>
+            </div>
+          </div>
+          <div class="home-slick-image">
+            <div>
+              <div class="parallax-wrapper"><img src="{{ 'assets/img/home/sld.jpg'|theme }}" alt="" class="home-slick-image__img"></div>
+            </div>
+            <div>
+              <div class="parallax-wrapper"><img src="{{ 'assets/img/home/sld2.jpg'|theme }}" alt="" class="home-slick-image__img"></div>
+            </div>
+            <div>
+              <div class="parallax-wrapper"><img src="{{ 'assets/img/home/sld3.jpg'|theme }}" alt="" class="home-slick-image__img"></div>
+            </div>
+            <div>
+              <div class="parallax-wrapper"><img src="{{ 'assets/img/home/sld4.jpg'|theme }}" alt="" class="home-slick-image__img"></div>
+            </div>
+            <div>
+              <div class="parallax-wrapper"><img src="{{ 'assets/img/home/sld5.jpg'|theme }}" alt="" class="home-slick-image__img"></div>
+            </div>
+          </div>
+          <!-- support--><a href="" class="home-support-btn btn-default _razzmatazz"><span>Сопровождение</span><img src="{{ 'assets/img/home/t_arrow_white.svg'|theme }}"></a>
+          <div class="home-support-image">
+            <div class="parallax-wrapper-small"><img src="{{ 'assets/img/home/depositphotos.jpg'|theme }}" alt=""></div>
+          </div>
+        </div>
+
+        
+        <!-- news-->
+        <div data-news-id="newsall" class="home-lt__news-content">
+          <div class="news-all">
+            <div class="news-all-h2">НОВОСТИ</div>
+            <ul class="news-all-ul">
+
+			{% for record in records %}
+              <li class="news-all-li">
+                <div class="news-all-milstone _start"><span class="news-all-milstone__year">2016</span><span class="news-all-milstone__pin"></span></div>
+              </li>
+
+
+              <li class="news-all-li">
+                <article class="news-all-article"><a href="" class="news-all-article__a">
+                    <div class="news-all-article__colL">
+                      <div class="news-all-article__date">21.12</div>
+                      <h3 class="news-all-article__h3">ТИМЛИС представил новую облачную платформу – T.Cloud</h3>
+                      <p class="news-all-article__p">Компания «Техносерв» объявляет о запуске нового направления бизнеса — облачного платформы. Компания «Техносерв» объявляет о запуске нового направления бизнеса — облачного платформы</p>
+                      <button class="home-news-btn _newsall"><span>Подробнее</span><img src="{{ 'assets/img/home/t_arrow.svg'|theme }}"></button>
+                    </div>
+                    <div class="news-all-article__colR"><img src="{{ 'assets/img/news-all/photo-1.jpg'|theme }}" alt="image" class="news-all-article__img"></div></a></article>
+              </li>
+
+
+              
+              <li class="news-all-li">
+                <div class="news-all-milstone _end"><span class="news-all-milstone__year">2014</span><span class="news-all-milstone__pin"></span></div>
+              </li>
+
+			{% endfor %}
+
+            </ul>
+          </div>
+        </div>
+        <!-- /news-->
+      </div>
+
+
+	<div class="home-lt__news-all js-ps-scroll">
+        <h2 class="home-news-h2">НОВОСТИ</h2>
+    {% for record in records %}
+        <article class="home-news-article">
+            {# Use spaceless tag to remove spaces inside the A tag. #}
+            {% spaceless %}
+                {% if detailsPage %}
+                    <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}" class="home-news-article__a">
+                {% endif %}
+
+                <h2 class="home-news-article__h2">{{ record.title }}</h2>
+
+                <p class="home-news-article__p">{{ html_limit(record.content , 150) | striptags }}</p>
+
+                <p class="home-news-article__date">{{ record.created_at.format('d.m.Y') }}</p>
+
+                {% if detailsPage %}
+                    </a>
+                {% endif %}
+            {% endspaceless %}
+        </article>
+    {% else %}
+        <article class="no-data">{{ noRecordsMessage }}</article>
+    {% endfor %}
+
+
+
+
+	<a href="" data-news-target="newsall" class="home-news-btn _home js-openNewsAll"><span>Все новости</span><img src="{{ 'assets/img/home/t_arrow.svg'|theme }}"></a>
+    
+
+
+</div>
+
+
+    </div>
+    <!-- JS Bottom-->
+    <!-- /JS Bottom-->
+

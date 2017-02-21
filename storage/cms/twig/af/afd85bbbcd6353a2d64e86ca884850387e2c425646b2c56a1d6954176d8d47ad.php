@@ -18,7 +18,7 @@ class __TwigTemplate_bfc4bc2910ac47e1a4fed16457f750a7103f5233562a49fc82690cd8f2f
         // line 1
         echo "<div class=\"home-lt menu-position0 js-menu\">
       <!-- menu-->
-      <div class=\"menu-lvl0\"><a href=\"\" class=\"menu-lvl0__logo\"><img src=\"";
+      <div class=\"menu-lvl0\"><a href=\"/\" class=\"menu-lvl0__logo\"><img src=\"";
         // line 3
         echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/img/logo.png");
         echo "\" alt=\"logo\"></a>
@@ -78,7 +78,7 @@ class __TwigTemplate_bfc4bc2910ac47e1a4fed16457f750a7103f5233562a49fc82690cd8f2f
     {
         return new Twig_Source("<div class=\"home-lt menu-position0 js-menu\">
       <!-- menu-->
-      <div class=\"menu-lvl0\"><a href=\"\" class=\"menu-lvl0__logo\"><img src=\"{{ 'assets/img/logo.png'|theme }}\" alt=\"logo\"></a>
+      <div class=\"menu-lvl0\"><a href=\"/\" class=\"menu-lvl0__logo\"><img src=\"{{ 'assets/img/logo.png'|theme }}\" alt=\"logo\"></a>
         <nav class=\"menu-lvl0__nav\"><a data-nav-id=\"about\" href=\"\" class=\"menu-lvl0__a _arrow [ js-lvl0 ]\">О компании</a><a data-nav-id=\"about2\" href=\"\" class=\"menu-lvl0__a _arrow [ js-lvl0 ]\">Направления</a><a data-nav-id=\"about\" href=\"\" class=\"menu-lvl0__a _arrow [ js-lvl0 ]\">Поставщики</a><a data-nav-id=\"about2\" href=\"\" class=\"menu-lvl0__a _arrow [ js-lvl0 ]\">Отрасли</a><a data-nav-id=\"about\" href=\"\" class=\"menu-lvl0__a _arrow [ js-lvl0 ]\">Заказчики</a><a href=\"\" class=\"menu-lvl0__a\">Сопровождение</a><a href=\"\" class=\"menu-lvl0__a\">Контакты</a></nav>
       </div>
       <div data-nav-ref=\"about\" class=\"menu-lvl1\">

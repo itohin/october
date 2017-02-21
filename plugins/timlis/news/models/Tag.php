@@ -23,6 +23,11 @@ class Tag extends Model
     public $rules = [
     ];
 
+    public function beforeSave()
+    {
+        $this->slug = str_slug($this->title, '-');
+    }
+
     /**
      * @var string The database table used by the model.
      */

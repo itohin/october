@@ -75,3 +75,6 @@
 1.0.26:
     - 'Updated table timlis_news_interest'
     - builder_table_update_timlis_news_interest_3.php
+1.0.27:
+    - 'Updated table timlis_news_'
+    - builder_table_update_timlis_news__15.php

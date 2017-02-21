@@ -1,6 +1,6 @@
-1487567472a:1:{s:15:"site/header.htm";a:5:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:5946:"    <div class="home-lt menu-position0 js-menu">
+1487657132a:1:{s:15:"site/header.htm";a:5:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:5947:"    <div class="home-lt menu-position0 js-menu">
       <!-- menu-->
-      <div class="menu-lvl0"><a href="" class="menu-lvl0__logo"><img src="{{ 'assets/img/logo.png'|theme }}" alt="logo"></a>
+      <div class="menu-lvl0"><a href="/" class="menu-lvl0__logo"><img src="{{ 'assets/img/logo.png'|theme }}" alt="logo"></a>
         <nav class="menu-lvl0__nav"><a data-nav-id="about" href="" class="menu-lvl0__a _arrow [ js-lvl0 ]">О компании</a><a data-nav-id="about2" href="" class="menu-lvl0__a _arrow [ js-lvl0 ]">Направления</a><a data-nav-id="about" href="" class="menu-lvl0__a _arrow [ js-lvl0 ]">Поставщики</a><a data-nav-id="about2" href="" class="menu-lvl0__a _arrow [ js-lvl0 ]">Отрасли</a><a data-nav-id="about" href="" class="menu-lvl0__a _arrow [ js-lvl0 ]">Заказчики</a><a href="" class="menu-lvl0__a">Сопровождение</a><a href="" class="menu-lvl0__a">Контакты</a></nav>
       </div>
       <div data-nav-ref="about" class="menu-lvl1">
@@ -27,9 +27,9 @@
           </nav>
         </div>
       </div>
-      <!-- /menu-->";s:5:"mtime";i:1487524359;s:6:"markup";s:5942:"<div class="home-lt menu-position0 js-menu">
+      <!-- /menu-->";s:5:"mtime";i:1487597025;s:6:"markup";s:5943:"<div class="home-lt menu-position0 js-menu">
       <!-- menu-->
-      <div class="menu-lvl0"><a href="" class="menu-lvl0__logo"><img src="{{ 'assets/img/logo.png'|theme }}" alt="logo"></a>
+      <div class="menu-lvl0"><a href="/" class="menu-lvl0__logo"><img src="{{ 'assets/img/logo.png'|theme }}" alt="logo"></a>
         <nav class="menu-lvl0__nav"><a data-nav-id="about" href="" class="menu-lvl0__a _arrow [ js-lvl0 ]">О компании</a><a data-nav-id="about2" href="" class="menu-lvl0__a _arrow [ js-lvl0 ]">Направления</a><a data-nav-id="about" href="" class="menu-lvl0__a _arrow [ js-lvl0 ]">Поставщики</a><a data-nav-id="about2" href="" class="menu-lvl0__a _arrow [ js-lvl0 ]">Отрасли</a><a data-nav-id="about" href="" class="menu-lvl0__a _arrow [ js-lvl0 ]">Заказчики</a><a href="" class="menu-lvl0__a">Сопровождение</a><a href="" class="menu-lvl0__a">Контакты</a></nav>
       </div>
       <div data-nav-ref="about" class="menu-lvl1">

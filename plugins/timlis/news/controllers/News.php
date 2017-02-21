@@ -5,6 +5,7 @@ use BackendMenu;
 
 class News extends Controller
 {
+
     public $implement = ['Backend\Behaviors\ListController','Backend\Behaviors\FormController','Backend\Behaviors\ReorderController'];
     
     public $listConfig = 'config_list.yaml';
@@ -16,4 +17,5 @@ class News extends Controller
         parent::__construct();
         BackendMenu::setContext('Timlis.News', 'main-menu-item');
     }
+
 }
