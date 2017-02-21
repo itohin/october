@@ -29,7 +29,7 @@ class Interest extends Model
      */
     public $table = 'timlis_news_interest';
 
-    public $attachMany = ['attachments' => ['System\Models\File']];
+    public $attachOne = ['attachments' => ['System\Models\File']];
     public $belongsTo = ['category' => ['Timlis\News\Models\Category']];
     public $belongsToMany = ['tags' => ['Timlis\News\Models\Tag', 'table'=>'timlis_news_interest_tags', 'order'=>'title']];
 }

@@ -1,0 +1,95 @@
+title = "Интересное"
+url = "/interest"
+layout = "master"
+is_hidden = 0
+
+[builderList]
+modelClass = "Timlis\News\Models\Interest"
+scope = "-"
+displayColumn = "title"
+noRecordsMessage = "Записей не найдено"
+detailsPage = "interest_single"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+pageNumber = "{{ :page }}"
+sortColumn = "created_at"
+sortDirection = "desc"
+==
+
+{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+
+{% put scripts %}
+    <script defer src="{{ 'assets/js/interest.js'|theme }}"></script>
+{% endput %}
+
+
+      <div class="lt__main _scroll js-ps-scroll">
+        <div class="ist">
+          <div class="ist-head">
+            <div class="ist-head__container">
+              <h1 class="ist-head__h1">ИТресное</h1>
+              <form action="" class="ist-filter">
+                <div class="ist-filter__body">
+                  <select name="" disabled>
+                    <option value="">ДОБЫЧА НЕФТИ</option>
+                    <option value="val0">val0</option>
+                    <option value="val1">val1</option>
+                  </select>
+                  <select name="">
+                    <option value="">УПРАВЛЕНИЕ</option>
+                    <option value="val0">val0</option>
+                    <option value="val1">val1</option>
+                  </select>
+                  <select name="">
+                    <option value="">SAP</option>
+                    <option value="val0">val0</option>
+                    <option value="val1">val1</option>
+                  </select>
+                  <select name="">
+                    <option value="">АЛРОСА</option>
+                    <option value="val0">val0</option>
+                    <option value="val1">val1</option>
+                  </select>
+                </div>
+                <button type="submit" class="ist-filter__submit">
+                  <div class="ist-filter__submit-tip">Отфильтровать</div>
+                </button>
+              </form>
+            </div>
+          </div>
+
+
+          <div class="ist-articles">
+
+		 {% for record in records %}
+
+            <div class="ist-article">
+
+            {# Use spaceless tag to remove spaces inside the A tag. #}
+
+
+              		<div class="ist-article__colL"><a href="/interest/{{ record.slug }}" class="ist-article__link"><img src="{{ record.attachments.path }}" alt="img" class="ist-article__img"></a></div>
+
+
+              <div class="ist-article__colR"><a href="/interest/{{ record.slug }}" class="ist-article__link">
+                  <h2 class="ist-article__h2">{{ record.title }}</h2></a>
+                <p class="ist-article__p">{{ html_limit(record.content , 150) | striptags }}</p>
+                <div class="ist-article__date">{{ record.created_at.format('d.m.Y') }}</div><a href="{{ record.link }}" title="" class="ist-article__refer">{{ record.links }}</a>
+              </div>
+            </div>
+
+         {% endfor %}   
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JS Bottom-->
+    <!-- /JS Bottom-->
+  </body>
+</html>

@@ -1,4 +1,4 @@
-1487657132a:1:{s:10:"master.htm";a:5:{s:8:"fileName";s:10:"master.htm";s:7:"content";s:1031:"<!DOCTYPE html>
+1487662696a:1:{s:10:"master.htm";a:5:{s:8:"fileName";s:10:"master.htm";s:7:"content";s:1052:"<!DOCTYPE html>
 <html lang="RU">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -19,17 +19,21 @@
     <!-- JS Head-->
     <script defer src="{{ 'assets/js/common.js'|theme }}"></script>
     <script defer src="{{ 'assets/js/home.js'|theme }}"></script>
+
+    {% scripts %}
     <!-- /JS Head-->
   </head>
   <body>
     <!-- JS Top-->
     <!-- /JS Top-->
+
+
       {% partial 'site/header' %}
       
       {% page %}
       
   </body>
-</html>";s:5:"mtime";i:1487561058;s:6:"markup";s:1031:"<!DOCTYPE html>
+</html>";s:5:"mtime";i:1487662092;s:6:"markup";s:1052:"<!DOCTYPE html>
 <html lang="RU">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -50,11 +54,15 @@
     <!-- JS Head-->
     <script defer src="{{ 'assets/js/common.js'|theme }}"></script>
     <script defer src="{{ 'assets/js/home.js'|theme }}"></script>
+
+    {% scripts %}
     <!-- /JS Head-->
   </head>
   <body>
     <!-- JS Top-->
     <!-- /JS Top-->
+
+
       {% partial 'site/header' %}
       
       {% page %}

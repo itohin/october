@@ -107,7 +107,7 @@ is_hidden = 0
 
 			{% endfor %}
 
-			{% set lastYear = year.year %}
+			{% set lastYear = year.year - 1 %}
 
 			{% endfor %}
 
@@ -127,11 +127,9 @@ is_hidden = 0
 
     {% for record in records %}
         <article class="home-news-article">
-            {# Use spaceless tag to remove spaces inside the A tag. #}
-            {% spaceless %}
-                {% if detailsPage %}
-                    <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}" class="home-news-article__a">
-                {% endif %}
+            
+                    <a href="/news/{{ record.slug }}" class="home-news-article__a">
+                
 
                 <h2 class="home-news-article__h2">{{ record.title }}</h2>
 
@@ -139,10 +137,9 @@ is_hidden = 0
 
                 <p class="home-news-article__date">{{ record.created_at.format('d.m.Y') }}</p>
 
-                {% if detailsPage %}
+                
                     </a>
-                {% endif %}
-            {% endspaceless %}
+           
         </article>
     {% else %}
         <article class="no-data">{{ noRecordsMessage }}</article>

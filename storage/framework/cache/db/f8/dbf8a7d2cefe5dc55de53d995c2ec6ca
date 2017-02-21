@@ -1,5 +1,5 @@
-1487657132a:1:{s:8:"test.htm";a:11:{s:8:"fileName";s:8:"test.htm";s:7:"content";s:6510:"title = "Главная"
-url = "/"
+1487662640a:1:{s:8:"test.htm";a:11:{s:8:"fileName";s:8:"test.htm";s:7:"content";s:6481:"title = "Test"
+url = "/test"
 layout = "master"
 description = "Главная страница"
 is_hidden = 0
@@ -149,9 +149,7 @@ sortDirection = "desc"
 
     </div>
     <!-- JS Bottom-->
-    <!-- /JS Bottom-->
-
-";s:5:"mtime";i:1487656528;s:6:"markup";s:6062:"{% set records = builderList.records %}
+    <!-- /JS Bottom-->";s:5:"mtime";i:1487657247;s:6:"markup";s:6062:"{% set records = builderList.records %}
 {% set displayColumn = builderList.displayColumn %}
 {% set noRecordsMessage = builderList.noRecordsMessage %}
 {% set detailsPage = builderList.detailsPage %}
@@ -283,4 +281,4 @@ sortDirection = "desc"
 
     </div>
     <!-- JS Bottom-->
-    <!-- /JS Bottom-->";s:4:"code";N;s:5:"title";s:14:"Главная";s:3:"url";s:1:"/";s:6:"layout";s:6:"master";s:11:"description";s:31:"Главная страница";s:9:"is_hidden";s:1:"0";s:11:"builderList";a:11:{s:10:"modelClass";s:23:"Timlis\News\Models\News";s:5:"scope";s:1:"-";s:13:"displayColumn";s:5:"title";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:12:"news_article";s:16:"detailsKeyColumn";s:4:"slug";s:19:"detailsUrlParameter";s:4:"slug";s:14:"recordsPerPage";s:1:"4";s:10:"pageNumber";s:11:"{{ :page }}";s:10:"sortColumn";s:10:"created_at";s:13:"sortDirection";s:4:"desc";}}}
+    <!-- /JS Bottom-->";s:4:"code";N;s:5:"title";s:4:"Test";s:3:"url";s:5:"/test";s:6:"layout";s:6:"master";s:11:"description";s:31:"Главная страница";s:9:"is_hidden";s:1:"0";s:11:"builderList";a:11:{s:10:"modelClass";s:23:"Timlis\News\Models\News";s:5:"scope";s:1:"-";s:13:"displayColumn";s:5:"title";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:12:"news_article";s:16:"detailsKeyColumn";s:4:"slug";s:19:"detailsUrlParameter";s:4:"slug";s:14:"recordsPerPage";s:1:"4";s:10:"pageNumber";s:11:"{{ :page }}";s:10:"sortColumn";s:10:"created_at";s:13:"sortDirection";s:4:"desc";}}}

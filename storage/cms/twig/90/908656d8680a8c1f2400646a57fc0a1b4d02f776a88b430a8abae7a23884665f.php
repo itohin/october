@@ -168,7 +168,7 @@ class __TwigTemplate_4039a6e19833cd1307d36fb56bb446cb39cd06f7d0b65a19ebd077d2c58
             echo "
 \t\t\t";
             // line 84
-            $context["lastYear"] = $this->getAttribute($context["year"], "year", array());
+            $context["lastYear"] = ($this->getAttribute($context["year"], "year", array()) - 1);
             // line 85
             echo "
 \t\t\t";
@@ -203,53 +203,37 @@ class __TwigTemplate_4039a6e19833cd1307d36fb56bb446cb39cd06f7d0b65a19ebd077d2c58
         foreach ($context['_seq'] as $context["_key"] => $context["record"]) {
             // line 103
             echo "        <article class=\"home-news-article\">
-            ";
+            
+                    <a href=\"/news/";
             // line 105
-            echo "            ";
-            ob_start();
-            // line 106
-            echo "                ";
-            if (($context["detailsPage"] ?? null)) {
-                // line 107
-                echo "                    <a href=\"";
-                echo $this->env->getExtension('Cms\Twig\Extension')->pageFilter(($context["detailsPage"] ?? null), array(($context["detailsUrlParameter"] ?? null) => $this->getAttribute($context["record"], ($context["detailsKeyColumn"] ?? null))));
-                echo "\" class=\"home-news-article__a\">
-                ";
-            }
-            // line 109
-            echo "
+            echo twig_escape_filter($this->env, $this->getAttribute($context["record"], "slug", array()), "html", null, true);
+            echo "\" class=\"home-news-article__a\">
+                
+
                 <h2 class=\"home-news-article__h2\">";
-            // line 110
+            // line 108
             echo twig_escape_filter($this->env, $this->getAttribute($context["record"], "title", array()), "html", null, true);
             echo "</h2>
 
                 <p class=\"home-news-article__p\">";
-            // line 112
+            // line 110
             echo twig_escape_filter($this->env, strip_tags(call_user_func_array($this->env->getFunction('html_limit')->getCallable(), array("limit", $this->getAttribute($context["record"], "content", array()), 150))), "html", null, true);
             echo "</p>
 
                 <p class=\"home-news-article__date\">";
-            // line 114
+            // line 112
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["record"], "created_at", array()), "format", array(0 => "d.m.Y"), "method"), "html", null, true);
             echo "</p>
 
-                ";
-            // line 116
-            if (($context["detailsPage"] ?? null)) {
-                // line 117
-                echo "                    </a>
-                ";
-            }
-            // line 119
-            echo "            ";
-            echo trim(preg_replace('/>\s+</', '><', ob_get_clean()));
-            // line 120
-            echo "        </article>
+                
+                    </a>
+           
+        </article>
     ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 122
+            // line 119
             echo "        <article class=\"no-data\">";
             echo twig_escape_filter($this->env, ($context["noRecordsMessage"] ?? null), "html", null, true);
             echo "</article>
@@ -258,13 +242,13 @@ class __TwigTemplate_4039a6e19833cd1307d36fb56bb446cb39cd06f7d0b65a19ebd077d2c58
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['record'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 124
+        // line 121
         echo "
 
 
 
 \t<a href=\"\" data-news-target=\"newsall\" class=\"home-news-btn _home js-openNewsAll\"><span>Все новости</span><img src=\"";
-        // line 128
+        // line 125
         echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/img/home/t_arrow.svg");
         echo "\"></a>
     
@@ -290,7 +274,7 @@ class __TwigTemplate_4039a6e19833cd1307d36fb56bb446cb39cd06f7d0b65a19ebd077d2c58
 
     public function getDebugInfo()
     {
-        return array (  268 => 128,  262 => 124,  253 => 122,  247 => 120,  244 => 119,  240 => 117,  238 => 116,  233 => 114,  228 => 112,  223 => 110,  220 => 109,  214 => 107,  211 => 106,  208 => 105,  205 => 103,  200 => 102,  184 => 89,  180 => 87,  173 => 85,  171 => 84,  168 => 83,  161 => 81,  154 => 77,  149 => 75,  145 => 74,  141 => 73,  135 => 72,  130 => 70,  126 => 68,  124 => 67,  121 => 66,  117 => 65,  111 => 62,  107 => 60,  103 => 59,  100 => 58,  98 => 57,  84 => 46,  79 => 44,  73 => 41,  67 => 38,  61 => 35,  55 => 32,  49 => 29,  19 => 1,);
+        return array (  252 => 125,  246 => 121,  237 => 119,  225 => 112,  220 => 110,  215 => 108,  209 => 105,  205 => 103,  200 => 102,  184 => 89,  180 => 87,  173 => 85,  171 => 84,  168 => 83,  161 => 81,  154 => 77,  149 => 75,  145 => 74,  141 => 73,  135 => 72,  130 => 70,  126 => 68,  124 => 67,  121 => 66,  117 => 65,  111 => 62,  107 => 60,  103 => 59,  100 => 58,  98 => 57,  84 => 46,  79 => 44,  73 => 41,  67 => 38,  61 => 35,  55 => 32,  49 => 29,  19 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -386,7 +370,7 @@ class __TwigTemplate_4039a6e19833cd1307d36fb56bb446cb39cd06f7d0b65a19ebd077d2c58
 
 \t\t\t{% endfor %}
 
-\t\t\t{% set lastYear = year.year %}
+\t\t\t{% set lastYear = year.year - 1 %}
 
 \t\t\t{% endfor %}
 
@@ -406,11 +390,9 @@ class __TwigTemplate_4039a6e19833cd1307d36fb56bb446cb39cd06f7d0b65a19ebd077d2c58
 
     {% for record in records %}
         <article class=\"home-news-article\">
-            {# Use spaceless tag to remove spaces inside the A tag. #}
-            {% spaceless %}
-                {% if detailsPage %}
-                    <a href=\"{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}\" class=\"home-news-article__a\">
-                {% endif %}
+            
+                    <a href=\"/news/{{ record.slug }}\" class=\"home-news-article__a\">
+                
 
                 <h2 class=\"home-news-article__h2\">{{ record.title }}</h2>
 
@@ -418,10 +400,9 @@ class __TwigTemplate_4039a6e19833cd1307d36fb56bb446cb39cd06f7d0b65a19ebd077d2c58
 
                 <p class=\"home-news-article__date\">{{ record.created_at.format('d.m.Y') }}</p>
 
-                {% if detailsPage %}
+                
                     </a>
-                {% endif %}
-            {% endspaceless %}
+           
         </article>
     {% else %}
         <article class=\"no-data\">{{ noRecordsMessage }}</article>

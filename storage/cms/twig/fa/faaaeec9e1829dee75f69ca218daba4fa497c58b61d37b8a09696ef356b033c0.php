@@ -58,22 +58,30 @@ class __TwigTemplate_228469463388c47840a3ce5787ec6c78ceaa91bcf1b64da311218b5043a
         // line 21
         echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/js/home.js");
         echo "\"></script>
-    <!-- /JS Head-->
+
+    ";
+        // line 23
+        echo $this->env->getExtension('CMS')->assetsFunction('js');
+        echo $this->env->getExtension('CMS')->displayBlock('scripts');
+        // line 24
+        echo "    <!-- /JS Head-->
   </head>
   <body>
     <!-- JS Top-->
     <!-- /JS Top-->
+
+
       ";
-        // line 27
+        // line 31
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('CMS')->partialFunction("site/header"        , $context['__cms_partial_params']        );
         unset($context['__cms_partial_params']);
-        // line 28
+        // line 32
         echo "      
       ";
-        // line 29
+        // line 33
         echo $this->env->getExtension('CMS')->pageFunction();
-        // line 30
+        // line 34
         echo "      
   </body>
 </html>";
@@ -91,7 +99,7 @@ class __TwigTemplate_228469463388c47840a3ce5787ec6c78ceaa91bcf1b64da311218b5043a
 
     public function getDebugInfo()
     {
-        return array (  77 => 30,  75 => 29,  72 => 28,  68 => 27,  59 => 21,  55 => 20,  49 => 17,  41 => 12,  37 => 11,  31 => 8,  27 => 7,  19 => 1,);
+        return array (  85 => 34,  83 => 33,  80 => 32,  76 => 31,  67 => 24,  64 => 23,  59 => 21,  55 => 20,  49 => 17,  41 => 12,  37 => 11,  31 => 8,  27 => 7,  19 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -125,11 +133,15 @@ class __TwigTemplate_228469463388c47840a3ce5787ec6c78ceaa91bcf1b64da311218b5043a
     <!-- JS Head-->
     <script defer src=\"{{ 'assets/js/common.js'|theme }}\"></script>
     <script defer src=\"{{ 'assets/js/home.js'|theme }}\"></script>
+
+    {% scripts %}
     <!-- /JS Head-->
   </head>
   <body>
     <!-- JS Top-->
     <!-- /JS Top-->
+
+
       {% partial 'site/header' %}
       
       {% page %}

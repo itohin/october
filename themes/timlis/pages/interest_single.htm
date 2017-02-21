@@ -1,0 +1,12 @@
+title = "Интересная новость"
+url = "/interest/:slug"
+layout = "master"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Timlis\News\Models\Interest"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "title"
+notFoundMessage = "Записей не найдено"
+==

@@ -1,5 +1,5 @@
 <?php 
-use Timlis\News\Models\News;class Cms58abd6546d8d9014615294_3198133952Class extends \Cms\Classes\PageCode
+use Timlis\News\Models\News;class Cms58abecbd61cf5620155035_2851274579Class extends \Cms\Classes\PageCode
 {
 
 

@@ -19,11 +19,15 @@
     <!-- JS Head-->
     <script defer src="{{ 'assets/js/common.js'|theme }}"></script>
     <script defer src="{{ 'assets/js/home.js'|theme }}"></script>
+
+    {% scripts %}
     <!-- /JS Head-->
   </head>
   <body>
     <!-- JS Top-->
     <!-- /JS Top-->
+
+
       {% partial 'site/header' %}
       
       {% page %}
