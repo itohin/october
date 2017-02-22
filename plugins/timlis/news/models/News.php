@@ -12,7 +12,7 @@ class News extends Model
     /*
      * Validation
      */
-    public $rules = [
+    public $rules = [ 
         'title' => 'required',
         'content' => 'required'
     ];

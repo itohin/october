@@ -1,0 +1,32 @@
+fields:
+    name:
+        label: Имя
+        oc.commentPosition: ''
+        span: left
+        placeholder: 'Введите ФИО'
+        type: text
+    slug:
+        label: 'Имя в URL'
+        oc.commentPosition: ''
+        span: right
+        placeholder: 'Заполнится автоматически'
+        preset:
+            field: name
+            type: slug
+        type: text
+    role:
+        label: Должность
+        oc.commentPosition: ''
+        span: full
+        placeholder: 'Введите должность'
+        type: text
+    attachments:
+        label: 'Загрузка фотографии'
+        oc.commentPosition: ''
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

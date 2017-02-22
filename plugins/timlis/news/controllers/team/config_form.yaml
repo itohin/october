@@ -1,0 +1,10 @@
+name: Team
+form: $/timlis/news/models/team/fields.yaml
+modelClass: Timlis\News\Models\Team
+defaultRedirect: timlis/news/team
+create:
+    redirect: 'timlis/news/team/update/:id'
+    redirectClose: timlis/news/team
+update:
+    redirect: timlis/news/team
+    redirectClose: timlis/news/team

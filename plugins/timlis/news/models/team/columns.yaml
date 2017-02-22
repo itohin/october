@@ -1,0 +1,11 @@
+columns:
+    name:
+        label: ФИО
+        type: text
+        searchable: true
+        sortable: true
+    role:
+        label: Должность
+        type: text
+        searchable: true
+        sortable: true

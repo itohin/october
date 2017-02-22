@@ -26,3 +26,7 @@ navigation:
                 label: Проекты
                 url: timlis/news/projects
                 icon: icon-archive
+            side-menu-item5:
+                label: Команда
+                url: timlis/news/team
+                icon: icon-users

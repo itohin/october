@@ -1,0 +1,4 @@
+title: Team
+modelClass: Timlis\News\Models\Team
+toolbar:
+    buttons: reorder_toolbar
