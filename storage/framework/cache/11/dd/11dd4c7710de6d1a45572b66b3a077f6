@@ -1,0 +1,67 @@
+1487795566a:1:{s:11:"mission.htm";a:9:{s:8:"fileName";s:11:"mission.htm";s:7:"content";s:715:"title = "Миссия"
+url = "/mission"
+layout = "master"
+is_hidden = 0
+
+==
+
+<?php
+
+	use Timlis\News\Models\Mission;
+
+	function onStart()
+	{
+		$this['record'] = Mission::find(1);
+
+	}	
+
+?>
+
+
+==
+{% put scripts %}
+    <script defer src="js/mission.js"></script>
+{% endput %}
+
+
+ <div class="mission-content lt__main _offset0 _scroll js-ps-scroll">
+        <div class="mission-feature">
+          <h2 class="mission-title">{{ record.title }}</h2>
+          <div class="mission-block">
+           {{ record.content | raw }}
+          </div>
+        </div>
+        <div class="mission-col"></div>
+      </div>
+    </div>
+    <!-- JS Bottom-->
+    <!-- /JS Bottom-->
+  </body>
+</html>";s:5:"mtime";i:1487746902;s:6:"markup";s:501:"{% put scripts %}
+    <script defer src="js/mission.js"></script>
+{% endput %}
+
+
+ <div class="mission-content lt__main _offset0 _scroll js-ps-scroll">
+        <div class="mission-feature">
+          <h2 class="mission-title">{{ record.title }}</h2>
+          <div class="mission-block">
+           {{ record.content | raw }}
+          </div>
+        </div>
+        <div class="mission-col"></div>
+      </div>
+    </div>
+    <!-- JS Bottom-->
+    <!-- /JS Bottom-->
+  </body>
+</html>";s:4:"code";s:112:"
+
+	use Timlis\News\Models\Mission;
+
+	function onStart()
+	{
+		$this['record'] = Mission::find(1);
+
+	}	
+";s:5:"title";s:12:"Миссия";s:3:"url";s:8:"/mission";s:6:"layout";s:6:"master";s:9:"is_hidden";s:1:"0";}}

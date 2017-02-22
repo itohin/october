@@ -1,0 +1,22 @@
+fields:
+    title:
+        label: Миссия
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    attachments:
+        label: 'Загрузите изображение'
+        oc.commentPosition: ''
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        type: fileupload
+    content:
+        label: Описание
+        size: ''
+        oc.commentPosition: ''
+        span: full
+        type: richeditor

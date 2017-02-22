@@ -1,0 +1,27 @@
+fields:
+    address:
+        label: Адрес
+        oc.commentPosition: ''
+        span: full
+        placeholder: 'Введите адрес'
+        type: text
+    phone:
+        label: Телефон
+        oc.commentPosition: ''
+        span: full
+        type: text
+    mail:
+        label: Email
+        oc.commentPosition: ''
+        span: full
+        type: text
+    pdf:
+        label: 'Загрузка PDF'
+        oc.commentPosition: ''
+        mode: file
+        useCaption: 0
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

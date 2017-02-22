@@ -17,6 +17,7 @@ class Facade extends FacadeParent
      */
     protected static function resolveFacadeInstance($name)
     {
+
         if (
             !is_object($name) &&
             !static::$app->bound($name) &&
@@ -24,6 +25,7 @@ class Facade extends FacadeParent
         ) {
             static::$app->instance($name, $instance);
         }
+
 
         return parent::resolveFacadeInstance($name);
     }

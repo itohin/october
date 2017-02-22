@@ -241,7 +241,7 @@ class NavigationManager
             'owner' => $owner
         ]));
 
-        $this->items[$itemKey] = $item;
+        $this->items[$itemKey] = $item; 
 
         if ($sideMenu !== null) {
             $this->addSideMenuItems($owner, $code, $sideMenu);

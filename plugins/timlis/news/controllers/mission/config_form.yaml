@@ -1,0 +1,11 @@
+name: Mission
+modelClass: Timlis\News\Models\Mission
+form: $/timlis/news/models/mission/fields.yaml
+defaultRedirect: timlis/news/mission/udate/1
+create:
+    redirect: 'timlis/news/mission/update/:id'
+    redirectClose: timlis/news/mission
+update:
+    redirect: timlis/news/mission
+    redirectClose: timlis/news/mission
+preview: {  }

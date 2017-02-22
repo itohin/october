@@ -87,3 +87,18 @@
 1.0.30:
     - 'Updated table timlis_news_team'
     - builder_table_update_timlis_news_team.php
+1.0.31:
+    - 'Created table timlis_news_mission'
+    - builder_table_create_timlis_news_mission.php
+1.0.32:
+    - 'Updated table timlis_news_mission'
+    - builder_table_update_timlis_news_mission.php
+1.0.33:
+    - 'Updated table timlis_news_mission'
+    - builder_table_update_timlis_news_mission_2.php
+1.0.34:
+    - 'Created table timlis_news_contacts'
+    - builder_table_create_timlis_news_contacts.php
+1.0.35:
+    - 'Updated table timlis_news_contacts'
+    - builder_table_update_timlis_news_contacts.php

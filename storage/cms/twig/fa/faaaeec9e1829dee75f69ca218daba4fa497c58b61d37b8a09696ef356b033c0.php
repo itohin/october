@@ -44,14 +44,14 @@ class __TwigTemplate_228469463388c47840a3ce5787ec6c78ceaa91bcf1b64da311218b5043a
     <!-- Favicon-->
     <!-- /Favicon-->
     <!-- Styles-->
-    <link rel=\"stylesheet\" href=\"";
+    <!-- <link rel=\"stylesheet\" href=\"";
         // line 17
         echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/css/styles.css");
-        echo "\">
-    <!-- <link rel=\"stylesheet\" href=\"";
+        echo "\"> -->
+    <link rel=\"stylesheet\" href=\"";
         // line 18
         echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/css/styles2.css");
-        echo "\"> -->
+        echo "\">
     <!-- /Styles-->
     <!-- JS Head-->
     <script defer src=\"";
@@ -157,8 +157,8 @@ class __TwigTemplate_228469463388c47840a3ce5787ec6c78ceaa91bcf1b64da311218b5043a
     <!-- Favicon-->
     <!-- /Favicon-->
     <!-- Styles-->
-    <link rel=\"stylesheet\" href=\"{{ 'assets/css/styles.css'|theme }}\">
-    <!-- <link rel=\"stylesheet\" href=\"{{ 'assets/css/styles2.css'|theme }}\"> -->
+    <!-- <link rel=\"stylesheet\" href=\"{{ 'assets/css/styles.css'|theme }}\"> -->
+    <link rel=\"stylesheet\" href=\"{{ 'assets/css/styles2.css'|theme }}\">
     <!-- /Styles-->
     <!-- JS Head-->
     <script defer src=\"{{ 'assets/js/common.js'|theme }}\"></script>

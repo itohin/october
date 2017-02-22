@@ -30,3 +30,11 @@ navigation:
                 label: Команда
                 url: timlis/news/team
                 icon: icon-users
+            side-menu-item6:
+                label: Миссия
+                url: timlis/news/mission/update/1
+                icon: icon-flag
+            side-menu-item7:
+                label: Контакты
+                url: timlis/news/contacts/update/1
+                icon: icon-map-marker

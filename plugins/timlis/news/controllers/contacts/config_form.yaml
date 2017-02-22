@@ -1,0 +1,10 @@
+name: Contacts
+form: $/timlis/news/models/contact/fields.yaml
+modelClass: Timlis\News\Models\Contact
+defaultRedirect: timlis/news/contacts
+create:
+    redirect: 'timlis/news/contacts/update/:id'
+    redirectClose: timlis/news/contacts
+update:
+    redirect: timlis/news/contacts
+    redirectClose: timlis/news/contacts

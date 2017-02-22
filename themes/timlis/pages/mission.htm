@@ -1,0 +1,40 @@
+title = "Миссия"
+url = "/mission"
+layout = "master"
+is_hidden = 0
+
+==
+
+<?php
+
+	use Timlis\News\Models\Mission;
+
+	function onStart()
+	{
+		$this['record'] = Mission::find(1);
+
+	}	
+
+?>
+
+
+==
+{% put scripts %}
+    <script defer src="js/mission.js"></script>
+{% endput %}
+
+
+ <div class="mission-content lt__main _offset0 _scroll js-ps-scroll">
+        <div class="mission-feature">
+          <h2 class="mission-title">{{ record.title }}</h2>
+          <div class="mission-block">
+           {{ record.content | raw }}
+          </div>
+        </div>
+        <div class="mission-col"></div>
+      </div>
+    </div>
+    <!-- JS Bottom-->
+    <!-- /JS Bottom-->
+  </body>
+</html>

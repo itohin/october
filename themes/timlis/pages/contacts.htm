@@ -1,0 +1,87 @@
+title = "Контакты"
+url = "/contacts"
+layout = "master"
+is_hidden = 0
+==  
+
+<?php
+
+	use Timlis\News\Models\Contact;
+
+	function onStart()
+	{
+		$this['record'] = Contact::find(1);
+
+		//dd($this['record']);
+
+		// $longitude = floatval($this['record']->longitude);
+		// $latitude = floatval($this['record']->latitude);
+
+	}	
+
+?>
+
+
+==
+
+{% put scripts %}
+    <script defer src="js/contacts.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+{% endput %}
+
+      <div class="lt__main _offset0 _scroll js-ps-scroll">
+        <div class="cnts">
+          <h1 class="cnts__h1">КОНТАКТЫ</h1>
+          <div class="cnts__container">
+            <div class="cnts__colL">
+              <dl class="cnts__dl">
+                <dt class="cnts__dt">Адрес</dt>
+                <dd class="cnts__dd">{{ record.address }}</dd>
+                <dt class="cnts__dt">Телефон</dt>
+                <dd class="cnts__dd">{{ record.phone }}</dd>
+                <dt class="cnts__dt">Почта</dt>
+                <dd class="cnts__dd"><a href="mailto:{{ record.mail }}" class="cnts__dd-mail">{{ record.mail }}</a></dd>
+              </dl>
+              <div class="cnts__load"><a target="_blank" href="{{ record.pdf.path }}" class="cnts__load-a">скачать реквизиты ООО «ТИМЛИС»</a></div>
+            </div>
+            <div id="map" class="cnts__colR"></div>
+          </div>
+        </div>
+      </div>
+      <footer class="cnts-footer">
+        <div class="cnts-footer__colL">© 2016 ТИМЛИС-Технолоджи. Все права защищены.</div>
+        <div class="cnts-footer__colR">Брендинг и дизайн <a href="">FROMstudio</a>. Разработано <a href="">Rocket Station</a>.</div>
+      </footer>
+    </div>
+    <!-- JS Bottom-->
+	<script type="text/javascript">
+
+	var latitude = {{ record.latitude }}
+
+	var longitude = {{ record.longitude }}
+
+
+	  ymaps.ready(init);
+	    var myMap,
+	        myPlacemark;
+
+	    function init(){     
+	        myMap = new ymaps.Map("map", {
+	            center: [latitude, longitude],
+	            zoom: 14
+	        });
+
+
+	        myMap.geoObjects
+	        .add(new ymaps.Placemark([latitude, longitude], {
+	            balloonContent: 'Timlis'
+	        }, {
+	            preset: 'islands#governmentCircleIcon',
+	            iconColor: '#3b5998'
+	        }));
+		    }
+	</script>
+
+    <!-- /JS Bottom-->
+  </body>
+</html>
