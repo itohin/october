@@ -27,8 +27,8 @@ class __TwigTemplate_d9f59362c5fc6c29108f297aae06d8a0afab767fc6563da20a5f589413b
 ";
         // line 6
         if (($context["record"] ?? null)) {
-            // line 7
-            echo "
+            echo "  
+
 
   
 <div class=\"lt__main _offset0 _scroll js-ps-scroll\">
@@ -64,41 +64,57 @@ class __TwigTemplate_d9f59362c5fc6c29108f297aae06d8a0afab767fc6563da20a5f589413b
             // line 24
             echo twig_escape_filter($this->env, $this->getAttribute(($context["record"] ?? null), "anallytics", array()), "html", null, true);
             echo "</span></li>
-              <li class=\"news-article-tag\"><span class=\"news-article-tag__prop\">ссылки на первоисточник:</span><span class=\"news-article-tag__val\">";
-            // line 25
-            echo twig_escape_filter($this->env, $this->getAttribute(($context["record"] ?? null), "links", array()), "html", null, true);
-            echo "</span></li>
+              <li class=\"news-article-tag\"><span class=\"news-article-tag__prop\">ссылки на первоисточник:</span><span class=\"news-article-tag__val\">
+                ";
+            // line 26
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable($this->getAttribute(($context["record"] ?? null), "arrLinks", array()));
+            foreach ($context['_seq'] as $context["_key"] => $context["link"]) {
+                // line 27
+                echo "              <a href=\"";
+                echo twig_escape_filter($this->env, $context["link"], "html", null, true);
+                echo "\" target=\"_blank\" class=\"cart-block__text cart-block__links-link\">";
+                echo twig_escape_filter($this->env, $context["link"], "html", null, true);
+                echo "</a>
+            ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['link'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 28
+            echo "  
+              </span></li>
             </ul>
           </div>
         </div>
         <div class=\"news-article-nav\">
           <div class=\"news-article-nav__rowA\">
           ";
-            // line 31
+            // line 35
             if ($this->getAttribute(($context["record"] ?? null), "nextSlug", array())) {
-                // line 32
+                // line 36
                 echo "          \t<a data-hover=\"Следующая новость\" href=\"/news/";
                 echo twig_escape_filter($this->env, $this->getAttribute(($context["record"] ?? null), "nextSlug", array()), "html", null, true);
                 echo "\"  class=\"news-article-next\"></a>
           ";
             }
-            // line 34
+            // line 38
             echo "
           ";
-            // line 35
+            // line 39
             if ($this->getAttribute(($context["record"] ?? null), "prevSlug", array())) {
                 echo "\t
           \t<a data-hover=\"Предыдущая новость\" href=\"/news/";
-                // line 36
+                // line 40
                 echo twig_escape_filter($this->env, $this->getAttribute(($context["record"] ?? null), "prevSlug", array()), "html", null, true);
                 echo "\" class=\"news-article-prev\"></a>
           ";
             }
-            // line 37
+            // line 41
             echo "\t
           </div>
           <div class=\"news-article-nav__rowB\"><a href=\"\" class=\"news-article-backlink\"><img src=\"";
-            // line 39
+            // line 43
             echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/img/home/t_arrow.svg");
             echo "\"><span>Назад к фильтру</span></a></div>
         </div>
@@ -109,7 +125,7 @@ class __TwigTemplate_d9f59362c5fc6c29108f297aae06d8a0afab767fc6563da20a5f589413b
 
 ";
         } else {
-            // line 47
+            // line 51
             echo "    ";
             echo twig_escape_filter($this->env, ($context["notFoundMessage"] ?? null), "html", null, true);
             echo "
@@ -129,7 +145,7 @@ class __TwigTemplate_d9f59362c5fc6c29108f297aae06d8a0afab767fc6563da20a5f589413b
 
     public function getDebugInfo()
     {
-        return array (  113 => 47,  102 => 39,  98 => 37,  93 => 36,  89 => 35,  86 => 34,  80 => 32,  78 => 31,  69 => 25,  65 => 24,  61 => 23,  54 => 19,  48 => 16,  42 => 13,  38 => 12,  31 => 7,  29 => 6,  25 => 4,  23 => 3,  21 => 2,  19 => 1,);
+        return array (  129 => 51,  118 => 43,  114 => 41,  109 => 40,  105 => 39,  102 => 38,  96 => 36,  94 => 35,  85 => 28,  74 => 27,  70 => 26,  65 => 24,  61 => 23,  54 => 19,  48 => 16,  42 => 13,  38 => 12,  29 => 6,  25 => 4,  23 => 3,  21 => 2,  19 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -147,7 +163,7 @@ class __TwigTemplate_d9f59362c5fc6c29108f297aae06d8a0afab767fc6563da20a5f589413b
 {% set notFoundMessage = builderDetails.notFoundMessage %}
 
 
-{% if record %}
+{% if record %}  
 
 
   
@@ -166,7 +182,11 @@ class __TwigTemplate_d9f59362c5fc6c29108f297aae06d8a0afab767fc6563da20a5f589413b
             <ul class=\"news-article-tags__ul\">
               <li class=\"news-article-tag\"><span class=\"news-article-tag__prop\">автор:</span><span class=\"news-article-tag__val\">{{ record.author }}</span></li>
               <li class=\"news-article-tag\"><span class=\"news-article-tag__prop\">аналитики:</span><span class=\"news-article-tag__val\">{{ record.anallytics }}</span></li>
-              <li class=\"news-article-tag\"><span class=\"news-article-tag__prop\">ссылки на первоисточник:</span><span class=\"news-article-tag__val\">{{ record.links }}</span></li>
+              <li class=\"news-article-tag\"><span class=\"news-article-tag__prop\">ссылки на первоисточник:</span><span class=\"news-article-tag__val\">
+                {% for link in record.arrLinks %}
+              <a href=\"{{ link }}\" target=\"_blank\" class=\"cart-block__text cart-block__links-link\">{{ link }}</a>
+            {% endfor %}  
+              </span></li>
             </ul>
           </div>
         </div>

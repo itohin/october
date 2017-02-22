@@ -1,6 +1,6 @@
 list: $/timlis/news/models/interest/columns.yaml
 modelClass: Timlis\News\Models\Interest
-title: Интересное
+title: Итересное
 noRecordsMessage: 'backend::lang.list.no_records'
 showSetup: true
 showCheckboxes: true

@@ -1,0 +1,10 @@
+name: Проекты
+form: $/timlis/news/models/project/fields.yaml
+modelClass: Timlis\News\Models\Project
+defaultRedirect: timlis/news/projects
+create:
+    redirect: 'timlis/news/projects/update/:id'
+    redirectClose: timlis/news/projects
+update:
+    redirect: timlis/news/projects
+    redirectClose: timlis/news/projects

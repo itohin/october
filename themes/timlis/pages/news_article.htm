@@ -8,14 +8,14 @@ modelClass = "Timlis\News\Models\News"
 identifierValue = "{{ :slug }}"
 modelKeyColumn = "slug"
 displayColumn = "title"
-notFoundMessage = "Record not found"
+notFoundMessage = "Записей не найдено"
 ==
 {% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
 
 
-{% if record %}
+{% if record %}  
 
 
   

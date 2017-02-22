@@ -24,5 +24,5 @@ class Category extends Model
      * @var string The database table used by the model.
      */
     public $table = 'timlis_news_category';
-    public $hasMany = ['category' => ['Timlis\News\Models\New']];
+    public $hasMany = ['category' => ['Timlis\News\Models\News', 'Timlis\News\Models\Project']];
 }

@@ -32,4 +32,42 @@ class Interest extends Model
     public $attachOne = ['attachments' => ['System\Models\File']];
     public $belongsTo = ['category' => ['Timlis\News\Models\Category']];
     public $belongsToMany = ['tags' => ['Timlis\News\Models\Tag', 'table'=>'timlis_news_interest_tags', 'order'=>'title']];
+
+    public function beforeSave()
+    {
+        $this->anallytics = str_replace(',', ' /', $this->anallytics);
+    }
+
+    public function arrLinks()
+    {
+        $arr = explode(' ', $this->links);
+
+        return $arr;
+    }
+
+    public function nextSlug()
+    {
+        $next = '';
+        $query = static::where('id', '<' , $this->id)
+                    ->orderBy('created_at','desc')
+                    ->first();
+        if($query)
+            $next = $query->slug;            
+
+        return $next;
+
+    }
+
+    public function prevSlug()
+    {
+        $prev = '';
+        $query = static::where('id', '>' , $this->id)
+                    ->orderBy('created_at','asc')
+                    ->first();
+        if($query)
+            $prev = $query->slug;             
+
+            return $prev;
+           
+    }
 }

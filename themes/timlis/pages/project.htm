@@ -1,0 +1,86 @@
+title = "Проект"
+url = "/projects/:slug"
+layout = "master"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Timlis\News\Models\Project"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "title"
+notFoundMessage = "Записей не найдено"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+
+
+
+{% if record %}
+    <div class="cart-content lt__main _offset1 _scroll js-ps-scroll">
+        <div class="cart-content__bg"></div>
+        <div class="cart-block"><a href="{{ record.pdf.path }}" target="_blank" class="cart-block__pdf">смотреть .PDF</a>
+          <h2 class="cart-title"><span>{{ record.title }}</span></h2>
+          <div class="cart-block__features">
+            <div class="cart-block__text cart-block__date">{{ record.created_at.format('d.m.Y') }}</div>
+            <div class="cart-block__row cart-block__author">
+              <div class="cart-block__text cart-block__author-title">автор:</div>
+              <div class="cart-block__text cart-block__author-text">{{ record.author }}</div>
+            </div>
+            <div class="cart-block__row cart-block__analysts">
+              <div class="cart-block__text cart-block__analysts-title">аналитики:</div>
+              <div class="cart-block__text cart-block__analysts-text">{{ record.anallytics }}</div>
+            </div>
+            <div class="cart-block__row cart-block__links">
+              <div class="cart-block__text cart-block__links-title">ссылки на первоисточник:</div>
+			{% for link in record.arrLinks %}
+              <a href="{{ link }}" target="_blank" class="cart-block__text cart-block__links-link">{{ link }}</a>
+            {% endfor %}  
+
+
+            </div>
+          </div><a href="/interest" class="cart-block__btn cart-it-btn btn-default _razzmatazz"><span>ИТресное</span></a>
+        </div>
+
+        {{ record.content | raw }}
+        <!-- <p class="cart-content__text cart-content__text-top">Компания «Тимлис», крупнейший российский системный интегратор, стала платиновым спонсором Dell EMC Forum 2016, который состоится в среду - 9 ноября 2016 года в ЦВК «Экспоцентр» (Москва, Краснопресненская наб., 14, павильон 3). Dell EMC Forum 2016 — крупнейшее мероприятие для партнеров и заказчиков новой компании Dell EMC, которое объединило ежегодные Форумы решений Dell и EMC Форумы. Мероприятие посвящено основным тенденциям, трансформирующим рынки и бизнес, и будет интересно как представителям бизнес-подразделений организаций, так и профессионалам в области высоких технологий.</p>
+        <div class="cart-content__business">
+          <div class="cart-content__business-item">
+            <div class="cart-content__business-title">1 уровень компании</div>
+            <div class="cart-content__business-text">Шаблон общих бизнес-процессов</div>
+          </div>
+          <div class="cart-content__business-item">
+            <div class="cart-content__business-title">2 уровень группы предприятий</div>
+            <div class="cart-content__business-text">Шаблон бизнес-процессов, общих для предприятий одного вида деятельности</div>
+          </div>
+          <div class="cart-content__business-item">
+            <div class="cart-content__business-title">3 уровень предприятия</div>
+            <div class="cart-content__business-text">Реализация безнес-процессов для конкретного предприятия</div>
+          </div>
+          <div class="cart-content__business-image"><img src="{{ 'assets/img/cart/n-business.png'|theme }}"></div>
+        </div>
+        <p class="cart-content__text">Компания «Тимлис», крупнейший российский системный интегратор, стала платиновым спонсором Dell EMC Forum 2016, который состоится в среду - 9 ноября 2016 года в ЦВК «Экспоцентр» (Москва, Краснопресненская наб., 14, павильон 3). Dell EMC Forum 2016 — крупнейшее мероприятие для партнеров и заказчиков новой компании Dell EMC, которое объединило ежегодные Форумы решений Dell и EMC Форумы. Мероприятие посвящено основным тенденциям, трансформирующим рынки и бизнес, и будет интересно как представителям бизнес-подразделений организаций, так и профессионалам в области высоких технологий.</p>
+        <p class="cart-content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+
+        <div class="cart-content__arrows">
+		{% if record.prevSlug %}	
+        <a href="/projects/{{ record.prevSlug }}" class="cart-content__arrow cart-content__arrow-top"><i class="cart-content__arrow-item cart-content__arrow-item-top"></i><span class="cart-content__arrow-text">предыдущая карточка</span></a>
+		{% endif %}
+		{% if record.nextSlug %}
+        <a href="/projects/{{ record.nextSlug }}" class="cart-content__arrow cart-content__arrow-bottom"><i class="cart-content__arrow-item cart-content__arrow-item-bottom"></i><span class="cart-content__arrow-text">следующая карточка</span></a>
+		{% endif %}
+        </div>
+      </div> 
+    </div>
+
+    {% else %}
+	    {{ notFoundMessage }}
+	{% endif %}
+    <!-- JS Bottom-->
+    <!-- /JS Bottom-->
+  </body>
+</html>
+
+
+

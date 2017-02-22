@@ -19,6 +19,10 @@ navigation:
                 url: timlis/news/category
                 icon: icon-bars
             side-menu-item3:
-                label: Интересное
+                label: Итересное
                 url: timlis/news/interest
                 icon: icon-star
+            side-menu-item4:
+                label: Проекты
+                url: timlis/news/projects
+                icon: icon-archive

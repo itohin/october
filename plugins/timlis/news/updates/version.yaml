@@ -78,3 +78,6 @@
 1.0.27:
     - 'Updated table timlis_news_'
     - builder_table_update_timlis_news__15.php
+1.0.28:
+    - 'Created table timlis_news_projects'
+    - builder_table_create_timlis_news_projects.php

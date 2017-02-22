@@ -29,6 +29,13 @@ class News extends Model
         $this->anallytics = str_replace(',', ' /', $this->anallytics);
     }
 
+    public function arrLinks()
+    {
+        $arr = explode(' ', $this->links);
+
+        return $arr;
+    }
+
 
     public function nextSlug()
     {
@@ -58,13 +65,13 @@ class News extends Model
 
     public function scopeHome($query)
     {
-        return $query->orderBy('created_at','desc')->paginate(4);
+        return $query->orderBy('id','desc')->paginate(4);
     }
 
 
     public function scopeNews($query)
     {
-        return $query->selectRaw('id, title, slug, content, created_at, year(created_at) year, month(created_at) month, day(created_at) day')->orderBy('created_at', 'desc')->get();
+        return $query->selectRaw('id, title, slug, content, created_at, year(created_at) year, month(created_at) month, day(created_at) day')->orderBy('id', 'desc')->get();
     }
 
     public function scopeYears($query)

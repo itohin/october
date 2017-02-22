@@ -48,40 +48,69 @@ class __TwigTemplate_228469463388c47840a3ce5787ec6c78ceaa91bcf1b64da311218b5043a
         // line 17
         echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/css/styles.css");
         echo "\">
+    <!-- <link rel=\"stylesheet\" href=\"";
+        // line 18
+        echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/css/styles2.css");
+        echo "\"> -->
     <!-- /Styles-->
     <!-- JS Head-->
     <script defer src=\"";
-        // line 20
+        // line 21
         echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/js/common.js");
         echo "\"></script>
     <script defer src=\"";
-        // line 21
+        // line 22
         echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/js/home.js");
         echo "\"></script>
 
     ";
-        // line 23
+        // line 24
         echo $this->env->getExtension('CMS')->assetsFunction('js');
         echo $this->env->getExtension('CMS')->displayBlock('scripts');
-        // line 24
-        echo "    <!-- /JS Head-->
+        // line 25
+        echo "
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-92301856-1', 'auto');
+    ga('send', 'pageview');
+
+        </script>
+        <!-- //GA-->
+        <!-- Google Tag Manager-->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NK8NGG5');
+        </script>
+    <!-- End Google Tag Manager-->
+    <!-- /JS Head-->
   </head>
   <body>
     <!-- JS Top-->
+
+    <!-- Google Tag Manager (noscript)-->
+    <noscript>
+      <iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-NK8NGG5\" height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript)-->
     <!-- /JS Top-->
 
 
       ";
-        // line 31
+        // line 57
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('CMS')->partialFunction("site/header"        , $context['__cms_partial_params']        );
         unset($context['__cms_partial_params']);
-        // line 32
+        // line 58
         echo "      
       ";
-        // line 33
+        // line 59
         echo $this->env->getExtension('CMS')->pageFunction();
-        // line 34
+        // line 60
         echo "      
   </body>
 </html>";
@@ -99,7 +128,7 @@ class __TwigTemplate_228469463388c47840a3ce5787ec6c78ceaa91bcf1b64da311218b5043a
 
     public function getDebugInfo()
     {
-        return array (  85 => 34,  83 => 33,  80 => 32,  76 => 31,  67 => 24,  64 => 23,  59 => 21,  55 => 20,  49 => 17,  41 => 12,  37 => 11,  31 => 8,  27 => 7,  19 => 1,);
+        return array (  114 => 60,  112 => 59,  109 => 58,  105 => 57,  71 => 25,  68 => 24,  63 => 22,  59 => 21,  53 => 18,  49 => 17,  41 => 12,  37 => 11,  31 => 8,  27 => 7,  19 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -129,16 +158,42 @@ class __TwigTemplate_228469463388c47840a3ce5787ec6c78ceaa91bcf1b64da311218b5043a
     <!-- /Favicon-->
     <!-- Styles-->
     <link rel=\"stylesheet\" href=\"{{ 'assets/css/styles.css'|theme }}\">
+    <!-- <link rel=\"stylesheet\" href=\"{{ 'assets/css/styles2.css'|theme }}\"> -->
     <!-- /Styles-->
     <!-- JS Head-->
     <script defer src=\"{{ 'assets/js/common.js'|theme }}\"></script>
     <script defer src=\"{{ 'assets/js/home.js'|theme }}\"></script>
 
     {% scripts %}
+
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-92301856-1', 'auto');
+    ga('send', 'pageview');
+
+        </script>
+        <!-- //GA-->
+        <!-- Google Tag Manager-->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NK8NGG5');
+        </script>
+    <!-- End Google Tag Manager-->
     <!-- /JS Head-->
   </head>
   <body>
     <!-- JS Top-->
+
+    <!-- Google Tag Manager (noscript)-->
+    <noscript>
+      <iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-NK8NGG5\" height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript)-->
     <!-- /JS Top-->
 
 

@@ -1,4 +1,4 @@
-1487662640a:1:{s:19:"interest_single.htm";a:10:{s:8:"fileName";s:19:"interest_single.htm";s:7:"content";s:300:"title = "Интересная новость"
+1487739936a:1:{s:19:"interest_single.htm";a:10:{s:8:"fileName";s:19:"interest_single.htm";s:7:"content";s:2449:"title = "Итересная новость"
 url = "/interest/:slug"
 layout = "master"
 is_hidden = 0
@@ -9,4 +9,89 @@ identifierValue = "{{ :slug }}"
 modelKeyColumn = "slug"
 displayColumn = "title"
 notFoundMessage = "Записей не найдено"
-==";s:5:"mtime";i:1487660249;s:6:"markup";s:0:"";s:4:"code";N;s:5:"title";s:35:"Интересная новость";s:3:"url";s:15:"/interest/:slug";s:6:"layout";s:6:"master";s:9:"is_hidden";s:1:"0";s:14:"builderDetails";a:5:{s:10:"modelClass";s:27:"Timlis\News\Models\Interest";s:15:"identifierValue";s:11:"{{ :slug }}";s:14:"modelKeyColumn";s:4:"slug";s:13:"displayColumn";s:5:"title";s:15:"notFoundMessage";s:34:"Записей не найдено";}}}
+==
+{% if record %}  
+
+
+  
+<div class="lt__main _offset0 _scroll js-ps-scroll">
+    <div class="news-article">
+      <div class="news-article__colL"><img src="{{ record.attachments.path }}" class="news-article__prview">
+        <div class="news-article__wswg">{{ record.content | raw }}</div>
+      </div>
+      <div class="news-article__colR">
+        <h1 class="news-article__h1">{{ record.title }}</h1>
+        <div class="news-article-tags">
+          <div class="news-article-tags__colL">
+            <div class="news-article-tag"><span class="news-article-tag__prop">{{ record.created_at.format('d.m.Y') }}</span></div>
+          </div>
+          <div class="news-article-tags__colR">
+            <ul class="news-article-tags__ul">
+              <li class="news-article-tag"><span class="news-article-tag__prop">автор:</span><span class="news-article-tag__val">{{ record.author }}</span></li>
+              <li class="news-article-tag"><span class="news-article-tag__prop">аналитики:</span><span class="news-article-tag__val">{{ record.anallytics }}</span></li>
+              <li class="news-article-tag"><span class="news-article-tag__prop">ссылки на первоисточник:</span><span class="news-article-tag__val">{{ record.links }}</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="news-article-nav">
+          <div class="news-article-nav__rowA">
+          {% if record.nextSlug %}
+          	<a data-hover="Следующая новость" href="/interest/{{ record.nextSlug }}"  class="news-article-next"></a>
+          {% endif %}
+
+          {% if record.prevSlug %}	
+          	<a data-hover="Предыдущая новость" href="/interest/{{ record.prevSlug }}" class="news-article-prev"></a>
+          {% endif %}	
+          </div>
+          <div class="news-article-nav__rowB"><a href="" class="news-article-backlink"><img src="{{ 'assets/img/home/t_arrow.svg'|theme }}"><span>Назад к фильтру</span></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}";s:5:"mtime";i:1487734625;s:6:"markup";s:2150:"{% if record %}  
+
+
+  
+<div class="lt__main _offset0 _scroll js-ps-scroll">
+    <div class="news-article">
+      <div class="news-article__colL"><img src="{{ record.attachments.path }}" class="news-article__prview">
+        <div class="news-article__wswg">{{ record.content | raw }}</div>
+      </div>
+      <div class="news-article__colR">
+        <h1 class="news-article__h1">{{ record.title }}</h1>
+        <div class="news-article-tags">
+          <div class="news-article-tags__colL">
+            <div class="news-article-tag"><span class="news-article-tag__prop">{{ record.created_at.format('d.m.Y') }}</span></div>
+          </div>
+          <div class="news-article-tags__colR">
+            <ul class="news-article-tags__ul">
+              <li class="news-article-tag"><span class="news-article-tag__prop">автор:</span><span class="news-article-tag__val">{{ record.author }}</span></li>
+              <li class="news-article-tag"><span class="news-article-tag__prop">аналитики:</span><span class="news-article-tag__val">{{ record.anallytics }}</span></li>
+              <li class="news-article-tag"><span class="news-article-tag__prop">ссылки на первоисточник:</span><span class="news-article-tag__val">{{ record.links }}</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="news-article-nav">
+          <div class="news-article-nav__rowA">
+          {% if record.nextSlug %}
+          	<a data-hover="Следующая новость" href="/interest/{{ record.nextSlug }}"  class="news-article-next"></a>
+          {% endif %}
+
+          {% if record.prevSlug %}	
+          	<a data-hover="Предыдущая новость" href="/interest/{{ record.prevSlug }}" class="news-article-prev"></a>
+          {% endif %}	
+          </div>
+          <div class="news-article-nav__rowB"><a href="" class="news-article-backlink"><img src="{{ 'assets/img/home/t_arrow.svg'|theme }}"><span>Назад к фильтру</span></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}";s:4:"code";N;s:5:"title";s:33:"Итересная новость";s:3:"url";s:15:"/interest/:slug";s:6:"layout";s:6:"master";s:9:"is_hidden";s:1:"0";s:14:"builderDetails";a:5:{s:10:"modelClass";s:27:"Timlis\News\Models\Interest";s:15:"identifierValue";s:11:"{{ :slug }}";s:14:"modelKeyColumn";s:4:"slug";s:13:"displayColumn";s:5:"title";s:15:"notFoundMessage";s:34:"Записей не найдено";}}}

@@ -1,0 +1,4 @@
+title: Проекты
+modelClass: Timlis\News\Models\Project
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,68 @@
+fields:
+    title:
+        label: Заголовок
+        oc.commentPosition: ''
+        span: left
+        placeholder: 'Введите заголовок'
+        type: text
+    slug:
+        label: 'Имя в URL'
+        oc.commentPosition: ''
+        span: auto
+        placeholder: 'Заполняется автоматически'
+        dependsOn: {  }
+        preset:
+            field: title
+            type: slug
+        type: text
+    category:
+        label: Категория
+        oc.commentPosition: ''
+        nameFrom: title
+        descriptionFrom: description
+        span: full
+        type: relation
+    pdf:
+        label: 'Загрузка PDF'
+        oc.commentPosition: ''
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        type: fileupload
+    attachments:
+        label: 'Загрузить изображение'
+        oc.commentPosition: ''
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: right
+        type: fileupload
+    author:
+        label: Автор
+        oc.commentPosition: ''
+        span: full
+        placeholder: 'ФИО Автора'
+        type: text
+    anallytics:
+        label: Аналитики
+        oc.commentPosition: ''
+        span: full
+        placeholder: 'Введите ФИО аналитиков через запятую'
+        type: text
+    links:
+        label: Ссылки
+        oc.commentPosition: ''
+        span: full
+        placeholder: 'Введите ссылки через пробел'
+        type: text
+    content:
+        label: 'Содержимое новости'
+        size: ''
+        oc.commentPosition: ''
+        span: full
+        type: richeditor
