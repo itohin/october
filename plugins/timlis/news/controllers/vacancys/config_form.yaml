@@ -1,0 +1,10 @@
+name: Vacancys
+form: $/timlis/news/models/vacancy/fields.yaml
+modelClass: Timlis\News\Models\Vacancy
+defaultRedirect: timlis/news/vacancys
+create:
+    redirect: 'timlis/news/vacancys/update/:id'
+    redirectClose: timlis/news/vacancys
+update:
+    redirect: timlis/news/vacancys
+    redirectClose: timlis/news/vacancys

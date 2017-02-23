@@ -38,3 +38,7 @@ navigation:
                 label: Контакты
                 url: timlis/news/contacts/update/1
                 icon: icon-map-marker
+            side-menu-item8:
+                label: Вакансии
+                url: timlis/news/vacancys
+                icon: icon-user-plus

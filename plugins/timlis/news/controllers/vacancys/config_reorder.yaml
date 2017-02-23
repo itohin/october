@@ -1,0 +1,4 @@
+title: Vacancys
+modelClass: Timlis\News\Models\Vacancy
+toolbar:
+    buttons: reorder_toolbar

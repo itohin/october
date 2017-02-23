@@ -102,3 +102,6 @@
 1.0.35:
     - 'Updated table timlis_news_contacts'
     - builder_table_update_timlis_news_contacts.php
+1.0.36:
+    - 'Created table timlis_news_vacancy'
+    - builder_table_create_timlis_news_vacancy.php
