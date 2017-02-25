@@ -1,0 +1,5 @@
+title: Menu
+modelClass: Timlis\News\Models\Menu
+nameFrom: title
+toolbar:
+    buttons: reorder_toolbar

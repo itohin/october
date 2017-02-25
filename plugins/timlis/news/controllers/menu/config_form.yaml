@@ -1,0 +1,10 @@
+name: Menu
+modelClass: Timlis\News\Models\Menu
+form: $/timlis/news/models/menu/fields.yaml
+defaultRedirect: timlis/news/menu
+create:
+    redirect: 'timlis/news/menu/update/:id'
+    redirectClose: timlis/news/menu
+update:
+    redirect: timlis/news/menu
+    redirectClose: timlis/news/menu

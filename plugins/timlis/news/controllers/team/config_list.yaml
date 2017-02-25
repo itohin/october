@@ -1,11 +1,12 @@
-list: $/timlis/news/models/team/columns.yaml
-modelClass: Timlis\News\Models\Team
 title: Team
+modelClass: Timlis\News\Models\Team
+list: $/timlis/news/models/team/columns.yaml
+recordUrl: 'timlis/news/team/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: '15'
 showSetup: true
 showCheckboxes: true
 toolbar:
     buttons: list_toolbar
     search:
         prompt: 'backend::lang.list.search_prompt'
-recordUrl: 'timlis/news/team/update/:id'

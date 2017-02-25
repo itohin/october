@@ -1,0 +1,6 @@
+columns:
+    title:
+        label: Категория
+        type: text
+        searchable: true
+        sortable: false

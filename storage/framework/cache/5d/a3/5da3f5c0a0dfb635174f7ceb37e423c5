@@ -1,4 +1,4 @@
-1487839687a:1:{s:12:"contacts.htm";a:9:{s:8:"fileName";s:12:"contacts.htm";s:7:"content";s:2472:"title = "Контакты"
+1488032372a:1:{s:12:"contacts.htm";a:9:{s:8:"fileName";s:12:"contacts.htm";s:7:"content";s:2336:"title = "Контакты"
 url = "/contacts"
 layout = "master"
 is_hidden = 0
@@ -12,10 +12,6 @@ is_hidden = 0
 	{
 		$this['record'] = Contact::find(1);
 
-		//dd($this['record']);
-
-		// $longitude = floatval($this['record']->longitude);
-		// $latitude = floatval($this['record']->latitude);
 
 	}	
 
@@ -84,7 +80,7 @@ is_hidden = 0
 
     <!-- /JS Bottom-->
   </body>
-</html>";s:5:"mtime";i:1487795091;s:6:"markup";s:2135:"{% put scripts %}
+</html>";s:5:"mtime";i:1487864103;s:6:"markup";s:2135:"{% put scripts %}
     <script defer src="js/contacts.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 {% endput %}
@@ -144,15 +140,11 @@ is_hidden = 0
 
     <!-- /JS Bottom-->
   </body>
-</html>";s:4:"code";s:236:"	use Timlis\News\Models\Contact;
+</html>";s:4:"code";s:100:"	use Timlis\News\Models\Contact;
 
 	function onStart()
 	{
 		$this['record'] = Contact::find(1);
 
-		//dd($this['record']);
-
-		// $longitude = floatval($this['record']->longitude);
-		// $latitude = floatval($this['record']->latitude);
 
 	}	";s:5:"title";s:16:"Контакты";s:3:"url";s:9:"/contacts";s:6:"layout";s:6:"master";s:9:"is_hidden";s:1:"0";}}

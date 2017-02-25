@@ -3,6 +3,7 @@ modelClass: Timlis\News\Models\Tag
 list: $/timlis/news/models/tag/columns.yaml
 recordUrl: 'timlis/news/tag/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: '15'
 showSetup: true
 showCheckboxes: true
 toolbar:

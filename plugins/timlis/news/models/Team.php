@@ -35,4 +35,24 @@ class Team extends Model
     public $table = 'timlis_news_team';
 
     public $attachOne = ['attachments' => ['System\Models\File']];
+
+    public function beforeSave()
+    {
+        $arr = explode('/r/n', $this->duty);
+
+        $str = '';
+
+        foreach($arr as $item){
+
+            $str .= sprintf("<p>%s</p>",$str);
+        }
+
+        $this->duty = $str;
+    }
+
+
+
+
+
+
 }

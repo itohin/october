@@ -24,5 +24,10 @@ class Category extends Model
      * @var string The database table used by the model.
      */
     public $table = 'timlis_news_category';
-    public $hasMany = ['category' => ['Timlis\News\Models\News', 'Timlis\News\Models\Project']];
+    public $hasMany = ['projects' => ['Timlis\News\Models\Project']];
+
+    public function beforeSave()
+    {
+        $this->slug = str_slug($this->title, '-');
+    }
 }

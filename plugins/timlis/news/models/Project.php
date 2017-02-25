@@ -22,6 +22,8 @@ class Project extends Model
         'content.required' => 'Введите текст'
     ];
 
+    protected $fillable = ['title', 'slug', 'anallytics', 'links', 'author', 'category_id', 'content'];
+
     /**
      * @var string The database table used by the model.
      */

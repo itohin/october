@@ -1,11 +1,12 @@
-list: $/timlis/news/models/interest/columns.yaml
-modelClass: Timlis\News\Models\Interest
 title: Итересное
+modelClass: Timlis\News\Models\Interest
+list: $/timlis/news/models/interest/columns.yaml
+recordUrl: 'timlis/news/interest/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: '15'
 showSetup: true
 showCheckboxes: true
 toolbar:
     buttons: list_toolbar
     search:
-        prompt: 'Поиск'
-recordUrl: 'timlis/news/interest/update/:id'
+        prompt: Поиск

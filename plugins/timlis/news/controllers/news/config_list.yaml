@@ -3,6 +3,7 @@ modelClass: Timlis\News\Models\News
 list: $/timlis/news/models/news/columns.yaml
 recordUrl: 'timlis/news/news/update/:id'
 noRecordsMessage: 'timlis.news::lang.plugin.no_record'
+recordsPerPage: '15'
 showSetup: true
 showCheckboxes: true
 toolbar:

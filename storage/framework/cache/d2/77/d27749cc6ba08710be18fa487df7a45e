@@ -1,23 +1,34 @@
-1487839691a:1:{s:8:"team.htm";a:10:{s:8:"fileName";s:8:"team.htm";s:7:"content";s:18098:"title = "Команда"
+1488032372a:1:{s:8:"team.htm";a:9:{s:8:"fileName";s:8:"team.htm";s:7:"content";s:6895:"title = "Команда"
 url = "/team"
 layout = "master"
 is_hidden = 0
 
-[builderList]
-modelClass = "Timlis\News\Models\Team"
-scope = "-"
-displayColumn = "title"
-noRecordsMessage = "Записей не найдено"
-detailsPage = "-"
-detailsUrlParameter = "id"
-pageNumber = "{{ :page }}"
 ==
-{% set records = builderList.records %}
-{% set displayColumn = builderList.displayColumn %}
-{% set noRecordsMessage = builderList.noRecordsMessage %}
-{% set detailsPage = builderList.detailsPage %}
-{% set detailsKeyColumn = builderList.detailsKeyColumn %}
-{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+
+<?php
+
+  use Timlis\News\Models\Team;
+  use Timlis\News\Models\Vacancy;
+
+  function onStart()
+  {
+    $this['records'] = Team::get();
+
+    $this['vacancys'] = Vacancy::get();
+
+    // $str = 'Hello world!';
+
+    // $this['htm'] = sprintf("<h1>%s</h1>",$str);
+
+    // dd($htm);
+
+  }
+
+
+?>
+
+
+==
 
 {% put scripts %}
     <script defer src="{{ 'assets/js/team.js'|theme }}"></script>
@@ -28,11 +39,11 @@ pageNumber = "{{ :page }}"
         <div class="team-feature">
           <h2 class="team-title team-title__team">Команда</h2>
           <div class="team-items">
-
           {% for record in records %}
             <div class="team-item">
               <div class="team-item__block">
                 <div class="team-item__title">{{ record.name }}</div>
+
                 <div class="team-item__text">{{ record.role }}</div>
               </div>
             </div>
@@ -40,9 +51,10 @@ pageNumber = "{{ :page }}"
           </div>
           <h2 class="team-title team-title__vacancy">Вакансии</h2>
           <section class="team-vacancies">
+          {% for vacancy in vacancys %}
             <div class="team-vacancy">
               <div class="team-vacancy__name">
-                <h3 class="team-vacancy__title">Инженер - технолог</h3>
+                <h3 class="team-vacancy__title">{{ vacancy.title }}</h3>
                 <p class="team-vacancy__text">зарплата от 90 000 руб.</p>
                 <p class="team-vacancy__text">требуемый опыт работы: 3—6 лет</p>
               </div>
@@ -83,92 +95,7 @@ pageNumber = "{{ :page }}"
                 </ul><a href="" class="team-vacancy__resume-btn btn-default _razzmatazz _size195x35">Отправить резюме</a>
               </div>
             </div>
-            <div class="team-vacancy">
-              <div class="team-vacancy__name">
-                <h3 class="team-vacancy__title">Специалист по тендерам</h3>
-                <p class="team-vacancy__text">зарплата от 90 000 руб.</p>
-                <p class="team-vacancy__text">требуемый опыт работы: 3—6 лет</p>
-              </div>
-              <div class="team-vacancy__desc">
-                <ul class="team-vacancy__desc-list">
-                  <div class="team-vacancy__desc-title">Обязанности:</div>
-                  <li class="team-vacancy__desc-item">поиск и работа с поставщиками комплектующих для производства нашей продукции (Европа, Китай, СНГ)</li>
-                  <li class="team-vacancy__desc-item">работа по размещению заказов, переговоры по стоимости</li>
-                  <li class="team-vacancy__desc-item">создание и проверка технической документации</li>
-                  <li class="team-vacancy__desc-item">работа с собственным конструкторским отделом (контроль чертежей)</li>
-                  <li class="team-vacancy__desc-item">создание технологических инструкций для сборочного цеха (последовательность всех этапов для производства изделия)</li>
-                  <li class="team-vacancy__desc-item">взаимодействие с техотделом и производством</li>
-                  <li class="team-vacancy__desc-item">пред- и послепродажная техническая поддержка заказчиков</li>
-                  <li class="team-vacancy__desc-item">участие в организации и проведении семинаров, тренингов заказчиков компании</li>
-                  <li class="team-vacancy__desc-item">участие в обеспечении продукции всеми необходимыми нормативными документами и технической документацией</li>
-                  <li class="team-vacancy__desc-item">консультации (телефонная поддержка) клиентов по вопросам правильной эксплуатации оборудования и устранения неисправностей</li>
-                  <li class="team-vacancy__desc-item">ведение отчетности по установленному и отремонтированному оборудованию</li>
-                  <li class="team-vacancy__desc-item">диагностика электрооборудования, гарантийных случаев</li>
-                </ul>
-                <ul class="team-vacancy__desc-list">
-                  <div class="team-vacancy__desc-title">Требования:</div>
-                  <li class="team-vacancy__desc-item">хорошие знания английского языка</li>
-                  <li class="team-vacancy__desc-item">высшее техническое образование</li>
-                  <li class="team-vacancy__desc-item">знания по электротехнике и электронике‚ знание механики, современной электрики и систем управления, хорошая техническая подготовка</li>
-                  <li class="team-vacancy__desc-item">умение читать сборочные чертежи, электрические схемы</li>
-                  <li class="team-vacancy__desc-item">опытный пользователь ПК</li>
-                </ul>
-                <ul class="team-vacancy__desc-list">
-                  <div class="team-vacancy__desc-title">Мы предлагаем:</div>
-                  <li class="team-vacancy__desc-item">сложную, интересную работу на реальный результат</li>
-                  <li class="team-vacancy__desc-item">достойную оплату труда – система оплаты прозрачная</li>
-                  <li class="team-vacancy__desc-item">профессиональное обучение и повышение квалификации за счет компании</li>
-                  <li class="team-vacancy__desc-item">современный комфортный офис, оборудованное рабочее место</li>
-                  <li class="team-vacancy__desc-item">работу в молодой дружной команде отличных специалистов, всегда готовых помочь</li>
-                  <li class="team-vacancy__desc-item">оформление по ТК РФ</li>
-                  <li class="team-vacancy__desc-item">график работы с 9.00 до 17.00</li>
-                  <li class="team-vacancy__desc-item">адекватное руководство</li>
-                </ul><a href="" class="team-vacancy__resume-btn btn-default _razzmatazz _size195x35">Отправить резюме</a>
-              </div>
-            </div>
-            <div class="team-vacancy">
-              <div class="team-vacancy__name">
-                <h3 class="team-vacancy__title">Руководитель направления по энергоэффективности</h3>
-                <p class="team-vacancy__text">зарплата по запросу</p>
-                <p class="team-vacancy__text">требуемый опыт работы: от 5 лет</p>
-              </div>
-              <div class="team-vacancy__desc">
-                <ul class="team-vacancy__desc-list">
-                  <div class="team-vacancy__desc-title">Обязанности:</div>
-                  <li class="team-vacancy__desc-item">поиск и работа с поставщиками комплектующих для производства нашей продукции (Европа, Китай, СНГ)</li>
-                  <li class="team-vacancy__desc-item">работа по размещению заказов, переговоры по стоимости</li>
-                  <li class="team-vacancy__desc-item">создание и проверка технической документации</li>
-                  <li class="team-vacancy__desc-item">работа с собственным конструкторским отделом (контроль чертежей)</li>
-                  <li class="team-vacancy__desc-item">создание технологических инструкций для сборочного цеха (последовательность всех этапов для производства изделия)</li>
-                  <li class="team-vacancy__desc-item">взаимодействие с техотделом и производством</li>
-                  <li class="team-vacancy__desc-item">пред- и послепродажная техническая поддержка заказчиков</li>
-                  <li class="team-vacancy__desc-item">участие в организации и проведении семинаров, тренингов заказчиков компании</li>
-                  <li class="team-vacancy__desc-item">участие в обеспечении продукции всеми необходимыми нормативными документами и технической документацией</li>
-                  <li class="team-vacancy__desc-item">консультации (телефонная поддержка) клиентов по вопросам правильной эксплуатации оборудования и устранения неисправностей</li>
-                  <li class="team-vacancy__desc-item">ведение отчетности по установленному и отремонтированному оборудованию</li>
-                  <li class="team-vacancy__desc-item">диагностика электрооборудования, гарантийных случаев</li>
-                </ul>
-                <ul class="team-vacancy__desc-list">
-                  <div class="team-vacancy__desc-title">Требования:</div>
-                  <li class="team-vacancy__desc-item">хорошие знания английского языка</li>
-                  <li class="team-vacancy__desc-item">высшее техническое образование</li>
-                  <li class="team-vacancy__desc-item">знания по электротехнике и электронике‚ знание механики, современной электрики и систем управления,  техническая подготовка</li>
-                  <li class="team-vacancy__desc-item">умение читать сборочные чертежи, электрические схемы</li>
-                  <li class="team-vacancy__desc-item">опытный пользователь ПК</li>
-                </ul>
-                <ul class="team-vacancy__desc-list">
-                  <div class="team-vacancy__desc-title">Мы предлагаем:</div>
-                  <li class="team-vacancy__desc-item">сложную, интересную работу на реальный результат</li>
-                  <li class="team-vacancy__desc-item">достойную оплату труда – система оплаты прозрачная</li>
-                  <li class="team-vacancy__desc-item">профессиональное обучение и повышение квалификации за счет компании</li>
-                  <li class="team-vacancy__desc-item">современный комфортный офис, оборудованное рабочее место</li>
-                  <li class="team-vacancy__desc-item">работу в молодой дружной команде отличных специалистов, всегда готовых помочь</li>
-                  <li class="team-vacancy__desc-item">оформление по ТК РФ</li>
-                  <li class="team-vacancy__desc-item">график работы с 9.00 до 17.00</li>
-                  <li class="team-vacancy__desc-item">адекватное руководство</li>
-                </ul><a href="" class="team-vacancy__resume-btn btn-default _razzmatazz _size195x35">Отправить резюме</a>
-              </div>
-            </div>
+          {% endfor %}    
           </section>
         </div>
       </div>
@@ -178,14 +105,7 @@ pageNumber = "{{ :page }}"
   </body>
 </html>
 
-";s:5:"mtime";i:1487743538;s:6:"markup";s:17788:"{% set records = builderList.records %}
-{% set displayColumn = builderList.displayColumn %}
-{% set noRecordsMessage = builderList.noRecordsMessage %}
-{% set detailsPage = builderList.detailsPage %}
-{% set detailsKeyColumn = builderList.detailsKeyColumn %}
-{% set detailsUrlParameter = builderList.detailsUrlParameter %}
-
-{% put scripts %}
+";s:5:"mtime";i:1487870906;s:6:"markup";s:6491:"{% put scripts %}
     <script defer src="{{ 'assets/js/team.js'|theme }}"></script>
 {% endput %}
 
@@ -194,11 +114,11 @@ pageNumber = "{{ :page }}"
         <div class="team-feature">
           <h2 class="team-title team-title__team">Команда</h2>
           <div class="team-items">
-
           {% for record in records %}
             <div class="team-item">
               <div class="team-item__block">
                 <div class="team-item__title">{{ record.name }}</div>
+
                 <div class="team-item__text">{{ record.role }}</div>
               </div>
             </div>
@@ -206,9 +126,10 @@ pageNumber = "{{ :page }}"
           </div>
           <h2 class="team-title team-title__vacancy">Вакансии</h2>
           <section class="team-vacancies">
+          {% for vacancy in vacancys %}
             <div class="team-vacancy">
               <div class="team-vacancy__name">
-                <h3 class="team-vacancy__title">Инженер - технолог</h3>
+                <h3 class="team-vacancy__title">{{ vacancy.title }}</h3>
                 <p class="team-vacancy__text">зарплата от 90 000 руб.</p>
                 <p class="team-vacancy__text">требуемый опыт работы: 3—6 лет</p>
               </div>
@@ -249,92 +170,7 @@ pageNumber = "{{ :page }}"
                 </ul><a href="" class="team-vacancy__resume-btn btn-default _razzmatazz _size195x35">Отправить резюме</a>
               </div>
             </div>
-            <div class="team-vacancy">
-              <div class="team-vacancy__name">
-                <h3 class="team-vacancy__title">Специалист по тендерам</h3>
-                <p class="team-vacancy__text">зарплата от 90 000 руб.</p>
-                <p class="team-vacancy__text">требуемый опыт работы: 3—6 лет</p>
-              </div>
-              <div class="team-vacancy__desc">
-                <ul class="team-vacancy__desc-list">
-                  <div class="team-vacancy__desc-title">Обязанности:</div>
-                  <li class="team-vacancy__desc-item">поиск и работа с поставщиками комплектующих для производства нашей продукции (Европа, Китай, СНГ)</li>
-                  <li class="team-vacancy__desc-item">работа по размещению заказов, переговоры по стоимости</li>
-                  <li class="team-vacancy__desc-item">создание и проверка технической документации</li>
-                  <li class="team-vacancy__desc-item">работа с собственным конструкторским отделом (контроль чертежей)</li>
-                  <li class="team-vacancy__desc-item">создание технологических инструкций для сборочного цеха (последовательность всех этапов для производства изделия)</li>
-                  <li class="team-vacancy__desc-item">взаимодействие с техотделом и производством</li>
-                  <li class="team-vacancy__desc-item">пред- и послепродажная техническая поддержка заказчиков</li>
-                  <li class="team-vacancy__desc-item">участие в организации и проведении семинаров, тренингов заказчиков компании</li>
-                  <li class="team-vacancy__desc-item">участие в обеспечении продукции всеми необходимыми нормативными документами и технической документацией</li>
-                  <li class="team-vacancy__desc-item">консультации (телефонная поддержка) клиентов по вопросам правильной эксплуатации оборудования и устранения неисправностей</li>
-                  <li class="team-vacancy__desc-item">ведение отчетности по установленному и отремонтированному оборудованию</li>
-                  <li class="team-vacancy__desc-item">диагностика электрооборудования, гарантийных случаев</li>
-                </ul>
-                <ul class="team-vacancy__desc-list">
-                  <div class="team-vacancy__desc-title">Требования:</div>
-                  <li class="team-vacancy__desc-item">хорошие знания английского языка</li>
-                  <li class="team-vacancy__desc-item">высшее техническое образование</li>
-                  <li class="team-vacancy__desc-item">знания по электротехнике и электронике‚ знание механики, современной электрики и систем управления, хорошая техническая подготовка</li>
-                  <li class="team-vacancy__desc-item">умение читать сборочные чертежи, электрические схемы</li>
-                  <li class="team-vacancy__desc-item">опытный пользователь ПК</li>
-                </ul>
-                <ul class="team-vacancy__desc-list">
-                  <div class="team-vacancy__desc-title">Мы предлагаем:</div>
-                  <li class="team-vacancy__desc-item">сложную, интересную работу на реальный результат</li>
-                  <li class="team-vacancy__desc-item">достойную оплату труда – система оплаты прозрачная</li>
-                  <li class="team-vacancy__desc-item">профессиональное обучение и повышение квалификации за счет компании</li>
-                  <li class="team-vacancy__desc-item">современный комфортный офис, оборудованное рабочее место</li>
-                  <li class="team-vacancy__desc-item">работу в молодой дружной команде отличных специалистов, всегда готовых помочь</li>
-                  <li class="team-vacancy__desc-item">оформление по ТК РФ</li>
-                  <li class="team-vacancy__desc-item">график работы с 9.00 до 17.00</li>
-                  <li class="team-vacancy__desc-item">адекватное руководство</li>
-                </ul><a href="" class="team-vacancy__resume-btn btn-default _razzmatazz _size195x35">Отправить резюме</a>
-              </div>
-            </div>
-            <div class="team-vacancy">
-              <div class="team-vacancy__name">
-                <h3 class="team-vacancy__title">Руководитель направления по энергоэффективности</h3>
-                <p class="team-vacancy__text">зарплата по запросу</p>
-                <p class="team-vacancy__text">требуемый опыт работы: от 5 лет</p>
-              </div>
-              <div class="team-vacancy__desc">
-                <ul class="team-vacancy__desc-list">
-                  <div class="team-vacancy__desc-title">Обязанности:</div>
-                  <li class="team-vacancy__desc-item">поиск и работа с поставщиками комплектующих для производства нашей продукции (Европа, Китай, СНГ)</li>
-                  <li class="team-vacancy__desc-item">работа по размещению заказов, переговоры по стоимости</li>
-                  <li class="team-vacancy__desc-item">создание и проверка технической документации</li>
-                  <li class="team-vacancy__desc-item">работа с собственным конструкторским отделом (контроль чертежей)</li>
-                  <li class="team-vacancy__desc-item">создание технологических инструкций для сборочного цеха (последовательность всех этапов для производства изделия)</li>
-                  <li class="team-vacancy__desc-item">взаимодействие с техотделом и производством</li>
-                  <li class="team-vacancy__desc-item">пред- и послепродажная техническая поддержка заказчиков</li>
-                  <li class="team-vacancy__desc-item">участие в организации и проведении семинаров, тренингов заказчиков компании</li>
-                  <li class="team-vacancy__desc-item">участие в обеспечении продукции всеми необходимыми нормативными документами и технической документацией</li>
-                  <li class="team-vacancy__desc-item">консультации (телефонная поддержка) клиентов по вопросам правильной эксплуатации оборудования и устранения неисправностей</li>
-                  <li class="team-vacancy__desc-item">ведение отчетности по установленному и отремонтированному оборудованию</li>
-                  <li class="team-vacancy__desc-item">диагностика электрооборудования, гарантийных случаев</li>
-                </ul>
-                <ul class="team-vacancy__desc-list">
-                  <div class="team-vacancy__desc-title">Требования:</div>
-                  <li class="team-vacancy__desc-item">хорошие знания английского языка</li>
-                  <li class="team-vacancy__desc-item">высшее техническое образование</li>
-                  <li class="team-vacancy__desc-item">знания по электротехнике и электронике‚ знание механики, современной электрики и систем управления,  техническая подготовка</li>
-                  <li class="team-vacancy__desc-item">умение читать сборочные чертежи, электрические схемы</li>
-                  <li class="team-vacancy__desc-item">опытный пользователь ПК</li>
-                </ul>
-                <ul class="team-vacancy__desc-list">
-                  <div class="team-vacancy__desc-title">Мы предлагаем:</div>
-                  <li class="team-vacancy__desc-item">сложную, интересную работу на реальный результат</li>
-                  <li class="team-vacancy__desc-item">достойную оплату труда – система оплаты прозрачная</li>
-                  <li class="team-vacancy__desc-item">профессиональное обучение и повышение квалификации за счет компании</li>
-                  <li class="team-vacancy__desc-item">современный комфортный офис, оборудованное рабочее место</li>
-                  <li class="team-vacancy__desc-item">работу в молодой дружной команде отличных специалистов, всегда готовых помочь</li>
-                  <li class="team-vacancy__desc-item">оформление по ТК РФ</li>
-                  <li class="team-vacancy__desc-item">график работы с 9.00 до 17.00</li>
-                  <li class="team-vacancy__desc-item">адекватное руководство</li>
-                </ul><a href="" class="team-vacancy__resume-btn btn-default _razzmatazz _size195x35">Отправить резюме</a>
-              </div>
-            </div>
+          {% endfor %}    
           </section>
         </div>
       </div>
@@ -342,4 +178,23 @@ pageNumber = "{{ :page }}"
     <!-- JS Bottom-->
     <!-- /JS Bottom-->
   </body>
-</html>";s:4:"code";N;s:5:"title";s:14:"Команда";s:3:"url";s:5:"/team";s:6:"layout";s:6:"master";s:9:"is_hidden";s:1:"0";s:11:"builderList";a:7:{s:10:"modelClass";s:23:"Timlis\News\Models\Team";s:5:"scope";s:1:"-";s:13:"displayColumn";s:5:"title";s:16:"noRecordsMessage";s:34:"Записей не найдено";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}}}
+</html>";s:4:"code";s:297:"
+
+  use Timlis\News\Models\Team;
+  use Timlis\News\Models\Vacancy;
+
+  function onStart()
+  {
+    $this['records'] = Team::get();
+
+    $this['vacancys'] = Vacancy::get();
+
+    // $str = 'Hello world!';
+
+    // $this['htm'] = sprintf("<h1>%s</h1>",$str);
+
+    // dd($htm);
+
+  }
+
+";s:5:"title";s:14:"Команда";s:3:"url";s:5:"/team";s:6:"layout";s:6:"master";s:9:"is_hidden";s:1:"0";}}

@@ -1,11 +1,12 @@
-list: $/timlis/news/models/vacancy/columns.yaml
-modelClass: Timlis\News\Models\Vacancy
 title: Vacancys
+modelClass: Timlis\News\Models\Vacancy
+list: $/timlis/news/models/vacancy/columns.yaml
+recordUrl: 'timlis/news/vacancys/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: '15'
 showSetup: true
 showCheckboxes: true
 toolbar:
     buttons: list_toolbar
     search:
         prompt: 'backend::lang.list.search_prompt'
-recordUrl: 'timlis/news/vacancys/update/:id'

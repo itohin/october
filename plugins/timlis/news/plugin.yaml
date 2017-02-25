@@ -14,10 +14,6 @@ navigation:
                 label: Новости
                 url: timlis/news/news
                 icon: icon-newspaper-o
-            side-menu-item2:
-                label: Категории
-                url: timlis/news/category
-                icon: icon-bars
             side-menu-item3:
                 label: Итересное
                 url: timlis/news/interest
@@ -42,3 +38,11 @@ navigation:
                 label: Вакансии
                 url: timlis/news/vacancys
                 icon: icon-user-plus
+            side-menu-item2:
+                label: Категории
+                url: timlis/news/category
+                icon: icon-bars
+            side-menu-item9:
+                label: 'Меню категорий'
+                url: timlis/news/menu
+                icon: icon-sitemap

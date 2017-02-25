@@ -1,0 +1,13 @@
+fields:
+    title:
+        label: 'Название категории'
+        oc.commentPosition: ''
+        span: left
+        type: text
+    category:
+        label: Подкатегории
+        oc.commentPosition: ''
+        nameFrom: title
+        descriptionFrom: description
+        span: left
+        type: relation

@@ -1,0 +1,12 @@
+title: Menu
+modelClass: Timlis\News\Models\Menu
+list: $/timlis/news/models/menu/columns.yaml
+recordUrl: 'timlis/news/menu/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: '15'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

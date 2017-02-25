@@ -1,0 +1,32 @@
+fields:
+    title:
+        label: Должность
+        oc.commentPosition: ''
+        span: left
+        placeholder: 'Введите должность'
+        type: text
+    wages:
+        label: 'Зарплата и опыт работы'
+        size: ''
+        oc.commentPosition: ''
+        span: right
+        placeholder: 'Зарплата и требуемый опыт'
+        type: textarea
+    duty:
+        label: Обязанности
+        size: large
+        oc.commentPosition: ''
+        span: left
+        type: richeditor
+    requirements:
+        label: Требования
+        size: large
+        oc.commentPosition: ''
+        span: right
+        type: richeditor
+    offer:
+        label: 'Мы предлагаем'
+        size: large
+        oc.commentPosition: ''
+        span: left
+        type: richeditor

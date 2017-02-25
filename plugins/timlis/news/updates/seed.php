@@ -1,43 +1,66 @@
-<?php //namespace Timlis\News\Updates;
+<?php namespace Timlis\News\Updates;
 
-// use Timlis\News\Models\News;
+use Timlis\News\Models\News;
 
-// use October\Rain\Database\Updates\Seeder;
+use Timlis\News\Models\Project;
 
-// use Faker;
+use October\Rain\Database\Updates\Seeder;
 
-// class SeedAllTables extends Seeder{
+use Faker;
+
+class SeedAllTables extends Seeder{
 
 
-// 	public function run()
-// 	{
-// 		$faker = Faker\Factory::create('ru_RU');
+	public function run()
+	{
+		$faker = Faker\Factory::create('ru_RU');
 
-// 		for($i = 0; $i < 100; $i++){
+		for($i = 0; $i < 100; $i++){
 
-// 			$name = $faker->sentence($nbWords = 3, $variableNbWords = true);
+			// $name = $faker->sentence($nbWords = 3, $variableNbWords = true);
 
-// 			News::create([
+			// News::create([
 
-// 				'title' => $name,
+			// 	'title' => $name,
 
-// 				'slug' => str_slug($name, '-'),
+			// 	'slug' => str_slug($name, '-'),
 
-// 				'anallytics' => $faker->sentence($nbWords = 1, $variableNbWords = true),
+			// 	'anallytics' => $faker->sentence($nbWords = 1, $variableNbWords = true),
 
-// 				'links' => $faker->sentence($nbWords = 1, $variableNbWords = true),
+			// 	'links' => $faker->sentence($nbWords = 1, $variableNbWords = true),
 
-// 				'author' => $faker->sentence($nbWords = 1, $variableNbWords = true),
+			// 	'author' => $faker->sentence($nbWords = 1, $variableNbWords = true),
 
-// 				'category_id' => $faker->randomDigit,
+			// 	'category_id' => $faker->randomDigit,
 
-// 				'content' => $faker->paragraph($nbSetences = 23, $variableNbSetences = true),
+			// 	'content' => $faker->paragraph($nbSetences = 23, $variableNbSetences = true),
 
-// 			]);
+			// ]);
 
-// 		}
+
+			$name = $faker->sentence($nbWords = 3, $variableNbWords = true);
+
+			Project::create([
+
+				'title' => $name,
+
+				'slug' => str_slug($name, '-'),
+
+				'anallytics' => $faker->sentence($nbWords = 1, $variableNbWords = true),
+
+				'links' => $faker->sentence($nbWords = 1, $variableNbWords = true),
+
+				'author' => $faker->sentence($nbWords = 1, $variableNbWords = true),
+
+				'category_id' => $faker->numberBetween($min = 1, $max = 11),
+
+				'content' => $faker->paragraph($nbSetences = 23, $variableNbSetences = true),
+
+			]);
+
+		}
 
 		
-// 	}
+	}
 
-// }
+}
