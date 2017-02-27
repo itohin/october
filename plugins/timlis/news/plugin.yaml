@@ -43,6 +43,6 @@ navigation:
                 url: timlis/news/category
                 icon: icon-bars
             side-menu-item9:
-                label: 'Меню категорий'
+                label: 'Меню сайта'
                 url: timlis/news/menu
                 icon: icon-sitemap

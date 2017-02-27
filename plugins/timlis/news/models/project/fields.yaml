@@ -22,6 +22,7 @@ fields:
         descriptionFrom: description
         span: full
         type: relation
+        emptyOption: -- Выбор категории --
     pdf:
         label: 'Загрузка PDF'
         oc.commentPosition: ''

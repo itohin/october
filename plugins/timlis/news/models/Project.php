@@ -14,12 +14,14 @@ class Project extends Model
      */
     public $rules = [
         'title' => 'required',
-        'content' => 'required'
+        'content' => 'required',
+        'category' => 'required'
     ];
 
     public $customMessages = [
         'title.required' => 'Введите заголовок',
-        'content.required' => 'Введите текст'
+        'content.required' => 'Введите текст',
+        'category.required' => 'Выберите категорию'
     ];
 
     protected $fillable = ['title', 'slug', 'anallytics', 'links', 'author', 'category_id', 'content'];

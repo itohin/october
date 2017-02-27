@@ -159,3 +159,15 @@
 1.0.54:
     - 'Updated table timlis_news_menu'
     - builder_table_update_timlis_news_menu_4.php
+1.0.55:
+    - 'Drop table timlis_news_'
+    - builder_table_delete_timlis_news_.php
+1.0.56:
+    - 'Drop table timlis_news_'
+    - builder_table_delete_timlis_news__2.php
+1.0.57:
+    - 'Updated table timlis_news_interest'
+    - builder_table_update_timlis_news_interest_4.php
+1.0.58:
+    - 'Updated table timlis_news_interest'
+    - builder_table_update_timlis_news_interest_5.php

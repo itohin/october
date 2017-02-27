@@ -21,15 +21,13 @@ class Contact extends Model
     public $rules = [ 
         'address' => 'required',
         'phone' => 'required',
-        'mail' => 'required',
-        'pdf' => 'required',
+        'mail' => 'required'
     ];
 
     public $customMessages = [
         'address.required' => 'Введите адрес',
         'phone.required' => 'Введите телефон',
-        'mail.required' => 'Введите Email',
-        'pdf.required' => 'Загрузите PDF',
+        'mail.required' => 'Введите Email'
     ];
 
     /**

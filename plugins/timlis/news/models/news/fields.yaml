@@ -42,13 +42,6 @@ fields:
         span: full
         placeholder: 'Введите ссылки через пробел'
         type: text
-    category:
-        label: Категория
-        oc.commentPosition: ''
-        nameFrom: title
-        descriptionFrom: description
-        span: full
-        type: relation
     content:
         label: 'Содержимое новости'
         size: ''

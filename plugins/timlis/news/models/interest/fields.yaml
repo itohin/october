@@ -48,9 +48,11 @@ fields:
         nameFrom: title
         descriptionFrom: description
         span: full
+        containerAttributes: {  }
         type: relation
+        emptyOption: -- Выбор категории --
     tags:
-        label: Теги (Введите через запятую, или выберите из списка не более 4-х тегов)
+        label: 'Теги (Введите через запятую, или выберите из списка не более 4-х тегов)'
         type: taglist
         separator: comma
         mode: relation

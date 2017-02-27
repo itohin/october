@@ -19,4 +19,18 @@ class Vacancy extends Model
      * @var string The database table used by the model.
      */
     public $table = 'timlis_news_vacancy';
+
+    // public function beforeSave()
+    // {
+    //     $arr = explode('/r/n', $this->duty);
+
+    //     $str = '';
+
+    //     foreach($arr as $item){
+
+    //         $str .= sprintf("<p>%s</p>",$str);
+    //     }
+
+    //     $this->duty = $str;
+    // }
 }
