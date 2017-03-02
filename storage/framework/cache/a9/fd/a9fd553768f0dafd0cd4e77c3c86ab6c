@@ -1,0 +1,18 @@
+1488432027a:1:{s:11:"calcres.htm";a:6:{s:8:"fileName";s:11:"calcres.htm";s:7:"content";s:224:"==
+{% if answer %}
+    <span class="lead">
+        Res = <span class="label label-success">{{ answer }}</span>
+    </span>
+{% else %}
+    <span class="text-muted">
+        click the "=" button
+    </span>
+{% endif %}";s:5:"mtime";i:1488430168;s:6:"markup";s:221:"{% if answer %}
+    <span class="lead">
+        Res = <span class="label label-success">{{ answer }}</span>
+    </span>
+{% else %}
+    <span class="text-muted">
+        click the "=" button
+    </span>
+{% endif %}";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}

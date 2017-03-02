@@ -1,0 +1,35 @@
+1488442686a:1:{s:13:"intresult.htm";a:5:{s:8:"fileName";s:13:"intresult.htm";s:7:"content";s:766:"{% for record in records %}
+
+  <div class="ist-article">
+
+  {# Use spaceless tag to remove spaces inside the A tag. #}
+
+
+    		<div class="ist-article__colL"><a href="/interest/{{ record.slug }}" class="ist-article__link"><img src="{{ record.attachments.path }}" alt="img" class="ist-article__img"></a></div>
+
+
+    <div class="ist-article__colR"><a href="/interest/{{ record.slug }}" class="ist-article__link">
+        <h2 class="ist-article__h2">{{ record.title }}</h2></a>
+      <p class="ist-article__p">{{ html_limit(record.content , 150) | striptags }}</p>
+      <div class="ist-article__date">{{ record.created_at.format('d.m.Y') }}</div><a href="{{ record.link }}" title="" class="ist-article__refer">{{ record.links }}</a>
+    </div>
+  </div>
+
+{% endfor %}  ";s:5:"mtime";i:1488432179;s:6:"markup";s:764:"{% for record in records %}
+
+  <div class="ist-article">
+
+  {# Use spaceless tag to remove spaces inside the A tag. #}
+
+
+    		<div class="ist-article__colL"><a href="/interest/{{ record.slug }}" class="ist-article__link"><img src="{{ record.attachments.path }}" alt="img" class="ist-article__img"></a></div>
+
+
+    <div class="ist-article__colR"><a href="/interest/{{ record.slug }}" class="ist-article__link">
+        <h2 class="ist-article__h2">{{ record.title }}</h2></a>
+      <p class="ist-article__p">{{ html_limit(record.content , 150) | striptags }}</p>
+      <div class="ist-article__date">{{ record.created_at.format('d.m.Y') }}</div><a href="{{ record.link }}" title="" class="ist-article__refer">{{ record.links }}</a>
+    </div>
+  </div>
+
+{% endfor %}";s:4:"code";N;}}

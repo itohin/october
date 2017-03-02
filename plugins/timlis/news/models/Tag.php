@@ -32,4 +32,6 @@ class Tag extends Model
      * @var string The database table used by the model.
      */
     public $table = 'timlis_news_tags';
+
+    public $belongsToMany = ['interest' => ['Timlis\News\Models\Interest', 'table'=>'timlis_news_interest_tags', 'order'=>'title']];
 }

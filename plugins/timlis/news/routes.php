@@ -4,6 +4,18 @@ use Timlis\News\Models\News;
 
 use Timlis\News\Models\Project;
 
+use Timlis\News\Models\Tag;
+
+use Timlis\News\Models\Interest;
+
+
+Route::get('testell', function(){
+
+
+	return Tag::all()->with('interest');
+
+});
+
 
 Route::get('/seed_news', function(){
 

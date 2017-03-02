@@ -1,4 +1,4 @@
-1488425980a:1:{s:19:"interest_single.htm";a:10:{s:8:"fileName";s:19:"interest_single.htm";s:7:"content";s:2506:"title = "Итересная новость"
+1488442676a:1:{s:19:"interest_single.htm";a:10:{s:8:"fileName";s:19:"interest_single.htm";s:7:"content";s:2506:"title = "Итересная новость"
 url = "/interest/:slug"
 layout = "master"
 is_hidden = 0

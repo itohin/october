@@ -1,4 +1,4 @@
-1488425805a:1:{s:21:"interest_category.htm";a:10:{s:8:"fileName";s:21:"interest_category.htm";s:7:"content";s:3414:"title = "Итересная категория"
+1488442676a:1:{s:21:"interest_category.htm";a:10:{s:8:"fileName";s:21:"interest_category.htm";s:7:"content";s:4276:"title = "Итересная категория"
 url = "/interest/category/:slug"
 layout = "master"
 is_hidden = 0
@@ -12,15 +12,49 @@ notFoundMessage = "Записей не найдено"
 ==
 <?php
 use Timlis\News\Models\Tag;
+use Timlis\News\Models\Interest;
 
 	function onStart()
 	{
 		$this['tags'] = Tag::get();
 
 	}
+
+  function onTest()
+  {
+      $arr = array();
+
+      $first = post('first');
+
+      if($first != '') $arr[] = $first;
+
+      $second = post('second');
+
+      if($second != '' && $second != $first) $arr[] = $second;
+
+      $third = post('third');
+
+      if($third != '' && $third != $first && $third != $second) $arr[] = $third;
+
+      //var_dump($arr);
+
+
+      if(!empty($arr)){
+
+        $this['records'] = Interest::get();
+
+      }else{
+
+        return Redirect::refresh();
+
+      }
+
+  }
+
 ?>
 ==
 {% set category = builderDetails.record %}
+{% set records = category.interest %}
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
 
@@ -35,27 +69,27 @@ use Timlis\News\Models\Tag;
           <div class="ist-head">
             <div class="ist-head__container">
               <h1 class="ist-head__h1">ИТресное</h1>
-              <form action="" class="ist-filter">
+              <form class="ist-filter" data-request="onTest" data-request-update="intresult:'#result'">
                 <div class="ist-filter__body">
                   <select name="" disabled>
                     <option value="{{ category.slug }}">{{ category.title|upper }}</option>
                   </select>
-                  <select name="">
+                  <select name="first">
                   <option value="">-- ПЕРВЫЙ ФИЛЬТР --</option>
                   {% for tag in tags %}
-                    <option value="{{tag.slug}}">{{tag.title|upper}}</option>
+                    <option value="{{tag.id}}">{{tag.title|upper}}</option>
                   {% endfor %}	  
                   </select>
-                  <select name="">
+                  <select name="second">
                   <option value="">-- ВТОРОЙ ФИЛЬТР --</option>
                   {% for tag in tags %}
-                    <option value="{{tag.slug}}">{{tag.title|upper}}</option>
+                    <option value="{{tag.id}}">{{tag.title|upper}}</option>
                   {% endfor %}	  
                   </select>
-                  <select name="">
+                  <select name="third">
                   <option value="">-- ТРЕТИЙ ФИЛЬТР --</option>
                   {% for tag in tags %}
-                    <option value="{{tag.slug}}">{{tag.title|upper}}</option>
+                    <option value="{{tag.id}}">{{tag.title|upper}}</option>
                   {% endfor %}	  
                   </select>
                 </div>
@@ -67,35 +101,44 @@ use Timlis\News\Models\Tag;
           </div>
 
 
-          <div class="ist-articles">
+          <div id="result" class="ist-articles">
 
-		 {% for record in category.interest %}
+		      {% for record in records %}
 
-            <div class="ist-article">
+          <div class="ist-article">
 
-            {# Use spaceless tag to remove spaces inside the A tag. #}
-
-
-              		<div class="ist-article__colL"><a href="/interest/{{ record.slug }}" class="ist-article__link"><img src="{{ record.attachments.path }}" alt="img" class="ist-article__img"></a></div>
+          {# Use spaceless tag to remove spaces inside the A tag. #}
 
 
-              <div class="ist-article__colR"><a href="/interest/{{ record.slug }}" class="ist-article__link">
-                  <h2 class="ist-article__h2">{{ record.title }}</h2></a>
-                <p class="ist-article__p">{{ html_limit(record.content , 150) | striptags }}</p>
-                <div class="ist-article__date">{{ record.created_at.format('d.m.Y') }}</div><a href="{{ record.link }}" title="" class="ist-article__refer">{{ record.links }}</a>
-              </div>
+                <div class="ist-article__colL"><a href="/interest/{{ record.slug }}" class="ist-article__link"><img src="{{ record.attachments.path }}" alt="img" class="ist-article__img"></a></div>
+
+
+            <div class="ist-article__colR"><a href="/interest/{{ record.slug }}" class="ist-article__link">
+                <h2 class="ist-article__h2">{{ record.title }}</h2></a>
+              <p class="ist-article__p">{{ html_limit(record.content , 150) | striptags }}</p>
+              <div class="ist-article__date">{{ record.created_at.format('d.m.Y') }}</div><a href="{{ record.link }}" title="" class="ist-article__refer">{{ record.links }}</a>
             </div>
+          </div>
 
-         {% endfor %}   
+        {% endfor %}  
             
           </div>
         </div>
       </div>
     </div>
     <!-- JS Bottom-->
+
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+    {% framework %}
+
     <!-- /JS Bottom-->
   </body>
-</html>";s:5:"mtime";i:1488369384;s:6:"markup";s:2998:"{% set category = builderDetails.record %}
+</html>";s:5:"mtime";i:1488436878;s:6:"markup";s:3287:"{% set category = builderDetails.record %}
+{% set records = category.interest %}
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
 
@@ -110,27 +153,27 @@ use Timlis\News\Models\Tag;
           <div class="ist-head">
             <div class="ist-head__container">
               <h1 class="ist-head__h1">ИТресное</h1>
-              <form action="" class="ist-filter">
+              <form class="ist-filter" data-request="onTest" data-request-update="intresult:'#result'">
                 <div class="ist-filter__body">
                   <select name="" disabled>
                     <option value="{{ category.slug }}">{{ category.title|upper }}</option>
                   </select>
-                  <select name="">
+                  <select name="first">
                   <option value="">-- ПЕРВЫЙ ФИЛЬТР --</option>
                   {% for tag in tags %}
-                    <option value="{{tag.slug}}">{{tag.title|upper}}</option>
+                    <option value="{{tag.id}}">{{tag.title|upper}}</option>
                   {% endfor %}	  
                   </select>
-                  <select name="">
+                  <select name="second">
                   <option value="">-- ВТОРОЙ ФИЛЬТР --</option>
                   {% for tag in tags %}
-                    <option value="{{tag.slug}}">{{tag.title|upper}}</option>
+                    <option value="{{tag.id}}">{{tag.title|upper}}</option>
                   {% endfor %}	  
                   </select>
-                  <select name="">
+                  <select name="third">
                   <option value="">-- ТРЕТИЙ ФИЛЬТР --</option>
                   {% for tag in tags %}
-                    <option value="{{tag.slug}}">{{tag.title|upper}}</option>
+                    <option value="{{tag.id}}">{{tag.title|upper}}</option>
                   {% endfor %}	  
                   </select>
                 </div>
@@ -142,38 +185,80 @@ use Timlis\News\Models\Tag;
           </div>
 
 
-          <div class="ist-articles">
+          <div id="result" class="ist-articles">
 
-		 {% for record in category.interest %}
+		      {% for record in records %}
 
-            <div class="ist-article">
+          <div class="ist-article">
 
-            {# Use spaceless tag to remove spaces inside the A tag. #}
-
-
-              		<div class="ist-article__colL"><a href="/interest/{{ record.slug }}" class="ist-article__link"><img src="{{ record.attachments.path }}" alt="img" class="ist-article__img"></a></div>
+          {# Use spaceless tag to remove spaces inside the A tag. #}
 
 
-              <div class="ist-article__colR"><a href="/interest/{{ record.slug }}" class="ist-article__link">
-                  <h2 class="ist-article__h2">{{ record.title }}</h2></a>
-                <p class="ist-article__p">{{ html_limit(record.content , 150) | striptags }}</p>
-                <div class="ist-article__date">{{ record.created_at.format('d.m.Y') }}</div><a href="{{ record.link }}" title="" class="ist-article__refer">{{ record.links }}</a>
-              </div>
+                <div class="ist-article__colL"><a href="/interest/{{ record.slug }}" class="ist-article__link"><img src="{{ record.attachments.path }}" alt="img" class="ist-article__img"></a></div>
+
+
+            <div class="ist-article__colR"><a href="/interest/{{ record.slug }}" class="ist-article__link">
+                <h2 class="ist-article__h2">{{ record.title }}</h2></a>
+              <p class="ist-article__p">{{ html_limit(record.content , 150) | striptags }}</p>
+              <div class="ist-article__date">{{ record.created_at.format('d.m.Y') }}</div><a href="{{ record.link }}" title="" class="ist-article__refer">{{ record.links }}</a>
             </div>
+          </div>
 
-         {% endfor %}   
+        {% endfor %}  
             
           </div>
         </div>
       </div>
     </div>
     <!-- JS Bottom-->
+
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+    {% framework %}
+
     <!-- /JS Bottom-->
   </body>
-</html>";s:4:"code";s:91:"use Timlis\News\Models\Tag;
+</html>";s:4:"code";s:651:"
+use Timlis\News\Models\Tag;
+use Timlis\News\Models\Interest;
 
 	function onStart()
 	{
 		$this['tags'] = Tag::get();
 
-	}";s:5:"title";s:37:"Итересная категория";s:3:"url";s:24:"/interest/category/:slug";s:6:"layout";s:6:"master";s:9:"is_hidden";s:1:"0";s:14:"builderDetails";a:5:{s:10:"modelClass";s:27:"Timlis\News\Models\Category";s:15:"identifierValue";s:11:"{{ :slug }}";s:14:"modelKeyColumn";s:4:"slug";s:13:"displayColumn";s:5:"title";s:15:"notFoundMessage";s:34:"Записей не найдено";}}}
+	}
+
+  function onTest()
+  {
+      $arr = array();
+
+      $first = post('first');
+
+      if($first != '') $arr[] = $first;
+
+      $second = post('second');
+
+      if($second != '' && $second != $first) $arr[] = $second;
+
+      $third = post('third');
+
+      if($third != '' && $third != $first && $third != $second) $arr[] = $third;
+
+      //var_dump($arr);
+
+
+      if(!empty($arr)){
+
+        $this['records'] = Interest::get();
+
+      }else{
+
+        return Redirect::refresh();
+
+      }
+
+  }
+";s:5:"title";s:37:"Итересная категория";s:3:"url";s:24:"/interest/category/:slug";s:6:"layout";s:6:"master";s:9:"is_hidden";s:1:"0";s:14:"builderDetails";a:5:{s:10:"modelClass";s:27:"Timlis\News\Models\Category";s:15:"identifierValue";s:11:"{{ :slug }}";s:14:"modelKeyColumn";s:4:"slug";s:13:"displayColumn";s:5:"title";s:15:"notFoundMessage";s:34:"Записей не найдено";}}}
