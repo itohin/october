@@ -43,7 +43,7 @@ notFoundMessage = "Записей не найдено"
           	<a data-hover="Предыдущая новость" href="/interest/{{ record.prevSlug }}" class="news-article-prev"></a>
           {% endif %}	
           </div>
-          <div class="news-article-nav__rowB"><a href="" class="news-article-backlink"><img src="{{ 'assets/img/home/t_arrow.svg'|theme }}"><span>Назад к фильтру</span></a></div>
+          <div class="news-article-nav__rowB"><a href="/interest/category/{{ record.category.slug }}" class="news-article-backlink"><img src="{{ 'assets/img/home/t_arrow.svg'|theme }}"><span>Назад к фильтру</span></a></div>
         </div>
       </div>
     </div>

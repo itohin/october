@@ -82,7 +82,10 @@ class __TwigTemplate_da4e903da265c198a29d804076cee35348f5e3b159eb1b66a561c8de724
 
 
             </div>
-          </div><a href=\"/interest\" class=\"cart-block__btn cart-it-btn btn-default _razzmatazz\"><span>ИТресное</span></a>
+          </div><a href=\"/interest/category/";
+            // line 31
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["record"] ?? null), "category", array()), "slug", array()), "html", null, true);
+            echo "\" class=\"cart-block__btn cart-it-btn btn-default _razzmatazz\"><span>ИТресное</span></a>
         </div>
 
         ";
@@ -163,7 +166,7 @@ class __TwigTemplate_da4e903da265c198a29d804076cee35348f5e3b159eb1b66a561c8de724
 
     public function getDebugInfo()
     {
-        return array (  148 => 68,  142 => 66,  135 => 61,  129 => 59,  126 => 58,  121 => 56,  117 => 55,  108 => 49,  90 => 34,  81 => 27,  70 => 26,  66 => 25,  59 => 21,  52 => 17,  46 => 14,  41 => 12,  37 => 11,  33 => 9,  31 => 8,  25 => 4,  23 => 3,  21 => 2,  19 => 1,);
+        return array (  151 => 68,  145 => 66,  138 => 61,  132 => 59,  129 => 58,  124 => 56,  120 => 55,  111 => 49,  93 => 34,  87 => 31,  81 => 27,  70 => 26,  66 => 25,  59 => 21,  52 => 17,  46 => 14,  41 => 12,  37 => 11,  33 => 9,  31 => 8,  25 => 4,  23 => 3,  21 => 2,  19 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -206,7 +209,7 @@ class __TwigTemplate_da4e903da265c198a29d804076cee35348f5e3b159eb1b66a561c8de724
 
 
             </div>
-          </div><a href=\"/interest\" class=\"cart-block__btn cart-it-btn btn-default _razzmatazz\"><span>ИТресное</span></a>
+          </div><a href=\"/interest/category/{{ record.category.slug }}\" class=\"cart-block__btn cart-it-btn btn-default _razzmatazz\"><span>ИТресное</span></a>
         </div>
 
         {{ record.content | raw }}

@@ -24,7 +24,7 @@ class Category extends Model
      * @var string The database table used by the model.
      */
     public $table = 'timlis_news_category';
-    public $hasMany = ['projects' => ['Timlis\News\Models\Project']];
+    public $hasMany = ['projects' => ['Timlis\News\Models\Project'], 'interest' => ['Timlis\News\Models\Interest']];
 
     public function beforeSave()
     {

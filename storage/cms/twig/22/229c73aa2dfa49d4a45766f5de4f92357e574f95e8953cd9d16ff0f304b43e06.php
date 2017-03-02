@@ -87,8 +87,10 @@ class __TwigTemplate_08dbc10a015d0f4887f8971f6ef311f8f494bf63f5ab6d7c86d90401554
             // line 32
             echo "\t
           </div>
-          <div class=\"news-article-nav__rowB\"><a href=\"\" class=\"news-article-backlink\"><img src=\"";
+          <div class=\"news-article-nav__rowB\"><a href=\"/interest/category/";
             // line 34
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["record"] ?? null), "category", array()), "slug", array()), "html", null, true);
+            echo "\" class=\"news-article-backlink\"><img src=\"";
             echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/img/home/t_arrow.svg");
             echo "\"><span>Назад к фильтру</span></a></div>
         </div>
@@ -119,7 +121,7 @@ class __TwigTemplate_08dbc10a015d0f4887f8971f6ef311f8f494bf63f5ab6d7c86d90401554
 
     public function getDebugInfo()
     {
-        return array (  103 => 42,  92 => 34,  88 => 32,  83 => 31,  79 => 30,  76 => 29,  70 => 27,  68 => 26,  59 => 20,  55 => 19,  51 => 18,  44 => 14,  38 => 11,  32 => 8,  28 => 7,  19 => 1,);
+        return array (  105 => 42,  92 => 34,  88 => 32,  83 => 31,  79 => 30,  76 => 29,  70 => 27,  68 => 26,  59 => 20,  55 => 19,  51 => 18,  44 => 14,  38 => 11,  32 => 8,  28 => 7,  19 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -165,7 +167,7 @@ class __TwigTemplate_08dbc10a015d0f4887f8971f6ef311f8f494bf63f5ab6d7c86d90401554
           \t<a data-hover=\"Предыдущая новость\" href=\"/interest/{{ record.prevSlug }}\" class=\"news-article-prev\"></a>
           {% endif %}\t
           </div>
-          <div class=\"news-article-nav__rowB\"><a href=\"\" class=\"news-article-backlink\"><img src=\"{{ 'assets/img/home/t_arrow.svg'|theme }}\"><span>Назад к фильтру</span></a></div>
+          <div class=\"news-article-nav__rowB\"><a href=\"/interest/category/{{ record.category.slug }}\" class=\"news-article-backlink\"><img src=\"{{ 'assets/img/home/t_arrow.svg'|theme }}\"><span>Назад к фильтру</span></a></div>
         </div>
       </div>
     </div>

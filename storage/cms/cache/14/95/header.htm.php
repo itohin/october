@@ -1,7 +1,7 @@
 <?php 
 use Timlis\News\Models\Menu;
 use Timlis\News\Models\Category;
-class Cms58b190c043b3c469566799_3428816043Class extends \Cms\Classes\PartialCode
+class Cms58b71767798b4797087516_2832356396Class extends \Cms\Classes\PartialCode
 {
     public function onStart()
   {

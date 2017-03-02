@@ -1,26 +1,29 @@
-1488425805a:1:{s:12:"interest.htm";a:10:{s:8:"fileName";s:12:"interest.htm";s:7:"content";s:3456:"title = "Итересное"
-url = "/interest"
+1488425805a:1:{s:21:"interest_category.htm";a:10:{s:8:"fileName";s:21:"interest_category.htm";s:7:"content";s:3414:"title = "Итересная категория"
+url = "/interest/category/:slug"
 layout = "master"
 is_hidden = 0
 
-[builderList]
-modelClass = "Timlis\News\Models\Interest"
-scope = "-"
+[builderDetails]
+modelClass = "Timlis\News\Models\Category"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
 displayColumn = "title"
-noRecordsMessage = "Записей не найдено"
-detailsPage = "interest_single"
-detailsKeyColumn = "slug"
-detailsUrlParameter = "slug"
-pageNumber = "{{ :page }}"
-sortColumn = "created_at"
-sortDirection = "desc"
+notFoundMessage = "Записей не найдено"
 ==
-{% set records = builderList.records %}
-{% set displayColumn = builderList.displayColumn %}
-{% set noRecordsMessage = builderList.noRecordsMessage %}
-{% set detailsPage = builderList.detailsPage %}
-{% set detailsKeyColumn = builderList.detailsKeyColumn %}
-{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+<?php
+use Timlis\News\Models\Tag;
+
+	function onStart()
+	{
+		$this['tags'] = Tag::get();
+
+	}
+?>
+==
+{% set category = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
 
 {% put scripts %}
     <script defer src="{{ 'assets/js/interest.js'|theme }}"></script>
@@ -35,24 +38,25 @@ sortDirection = "desc"
               <form action="" class="ist-filter">
                 <div class="ist-filter__body">
                   <select name="" disabled>
-                    <option value="">ДОБЫЧА НЕФТИ</option>
-                    <option value="val0">val0</option>
-                    <option value="val1">val1</option>
+                    <option value="{{ category.slug }}">{{ category.title|upper }}</option>
                   </select>
                   <select name="">
-                    <option value="">УПРАВЛЕНИЕ</option>
-                    <option value="val0">val0</option>
-                    <option value="val1">val1</option>
+                  <option value="">-- ПЕРВЫЙ ФИЛЬТР --</option>
+                  {% for tag in tags %}
+                    <option value="{{tag.slug}}">{{tag.title|upper}}</option>
+                  {% endfor %}	  
                   </select>
                   <select name="">
-                    <option value="">SAP</option>
-                    <option value="val0">val0</option>
-                    <option value="val1">val1</option>
+                  <option value="">-- ВТОРОЙ ФИЛЬТР --</option>
+                  {% for tag in tags %}
+                    <option value="{{tag.slug}}">{{tag.title|upper}}</option>
+                  {% endfor %}	  
                   </select>
                   <select name="">
-                    <option value="">АЛРОСА</option>
-                    <option value="val0">val0</option>
-                    <option value="val1">val1</option>
+                  <option value="">-- ТРЕТИЙ ФИЛЬТР --</option>
+                  {% for tag in tags %}
+                    <option value="{{tag.slug}}">{{tag.title|upper}}</option>
+                  {% endfor %}	  
                   </select>
                 </div>
                 <button type="submit" class="ist-filter__submit">
@@ -65,7 +69,7 @@ sortDirection = "desc"
 
           <div class="ist-articles">
 
-		 {% for record in records %}
+		 {% for record in category.interest %}
 
             <div class="ist-article">
 
@@ -91,12 +95,10 @@ sortDirection = "desc"
     <!-- JS Bottom-->
     <!-- /JS Bottom-->
   </body>
-</html>";s:5:"mtime";i:1487734575;s:6:"markup";s:3061:"{% set records = builderList.records %}
-{% set displayColumn = builderList.displayColumn %}
-{% set noRecordsMessage = builderList.noRecordsMessage %}
-{% set detailsPage = builderList.detailsPage %}
-{% set detailsKeyColumn = builderList.detailsKeyColumn %}
-{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+</html>";s:5:"mtime";i:1488369384;s:6:"markup";s:2998:"{% set category = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
 
 {% put scripts %}
     <script defer src="{{ 'assets/js/interest.js'|theme }}"></script>
@@ -111,24 +113,25 @@ sortDirection = "desc"
               <form action="" class="ist-filter">
                 <div class="ist-filter__body">
                   <select name="" disabled>
-                    <option value="">ДОБЫЧА НЕФТИ</option>
-                    <option value="val0">val0</option>
-                    <option value="val1">val1</option>
+                    <option value="{{ category.slug }}">{{ category.title|upper }}</option>
                   </select>
                   <select name="">
-                    <option value="">УПРАВЛЕНИЕ</option>
-                    <option value="val0">val0</option>
-                    <option value="val1">val1</option>
+                  <option value="">-- ПЕРВЫЙ ФИЛЬТР --</option>
+                  {% for tag in tags %}
+                    <option value="{{tag.slug}}">{{tag.title|upper}}</option>
+                  {% endfor %}	  
                   </select>
                   <select name="">
-                    <option value="">SAP</option>
-                    <option value="val0">val0</option>
-                    <option value="val1">val1</option>
+                  <option value="">-- ВТОРОЙ ФИЛЬТР --</option>
+                  {% for tag in tags %}
+                    <option value="{{tag.slug}}">{{tag.title|upper}}</option>
+                  {% endfor %}	  
                   </select>
                   <select name="">
-                    <option value="">АЛРОСА</option>
-                    <option value="val0">val0</option>
-                    <option value="val1">val1</option>
+                  <option value="">-- ТРЕТИЙ ФИЛЬТР --</option>
+                  {% for tag in tags %}
+                    <option value="{{tag.slug}}">{{tag.title|upper}}</option>
+                  {% endfor %}	  
                   </select>
                 </div>
                 <button type="submit" class="ist-filter__submit">
@@ -141,7 +144,7 @@ sortDirection = "desc"
 
           <div class="ist-articles">
 
-		 {% for record in records %}
+		 {% for record in category.interest %}
 
             <div class="ist-article">
 
@@ -167,4 +170,10 @@ sortDirection = "desc"
     <!-- JS Bottom-->
     <!-- /JS Bottom-->
   </body>
-</html>";s:4:"code";N;s:5:"title";s:18:"Итересное";s:3:"url";s:9:"/interest";s:6:"layout";s:6:"master";s:9:"is_hidden";s:1:"0";s:11:"builderList";a:10:{s:10:"modelClass";s:27:"Timlis\News\Models\Interest";s:5:"scope";s:1:"-";s:13:"displayColumn";s:5:"title";s:16:"noRecordsMessage";s:34:"Записей не найдено";s:11:"detailsPage";s:15:"interest_single";s:16:"detailsKeyColumn";s:4:"slug";s:19:"detailsUrlParameter";s:4:"slug";s:10:"pageNumber";s:11:"{{ :page }}";s:10:"sortColumn";s:10:"created_at";s:13:"sortDirection";s:4:"desc";}}}
+</html>";s:4:"code";s:91:"use Timlis\News\Models\Tag;
+
+	function onStart()
+	{
+		$this['tags'] = Tag::get();
+
+	}";s:5:"title";s:37:"Итересная категория";s:3:"url";s:24:"/interest/category/:slug";s:6:"layout";s:6:"master";s:9:"is_hidden";s:1:"0";s:14:"builderDetails";a:5:{s:10:"modelClass";s:27:"Timlis\News\Models\Category";s:15:"identifierValue";s:11:"{{ :slug }}";s:14:"modelKeyColumn";s:4:"slug";s:13:"displayColumn";s:5:"title";s:15:"notFoundMessage";s:34:"Записей не найдено";}}}

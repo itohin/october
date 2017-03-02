@@ -1,4 +1,4 @@
-1488189258a:1:{s:11:"project.htm";a:10:{s:8:"fileName";s:11:"project.htm";s:7:"content";s:6723:"title = "Проект"
+1488425807a:1:{s:11:"project.htm";a:10:{s:8:"fileName";s:11:"project.htm";s:7:"content";s:6759:"title = "Проект"
 url = "/projects/:slug"
 layout = "master"
 is_hidden = 0
@@ -40,7 +40,7 @@ notFoundMessage = "Записей не найдено"
 
 
             </div>
-          </div><a href="/interest" class="cart-block__btn cart-it-btn btn-default _razzmatazz"><span>ИТресное</span></a>
+          </div><a href="/interest/category/{{ record.category.slug }}" class="cart-block__btn cart-it-btn btn-default _razzmatazz"><span>ИТресное</span></a>
         </div>
 
         {{ record.content | raw }}
@@ -84,7 +84,7 @@ notFoundMessage = "Записей не найдено"
 
 
 
-";s:5:"mtime";i:1487739167;s:6:"markup";s:6426:"{% set record = builderDetails.record %}
+";s:5:"mtime";i:1488369416;s:6:"markup";s:6462:"{% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
 
@@ -114,7 +114,7 @@ notFoundMessage = "Записей не найдено"
 
 
             </div>
-          </div><a href="/interest" class="cart-block__btn cart-it-btn btn-default _razzmatazz"><span>ИТресное</span></a>
+          </div><a href="/interest/category/{{ record.category.slug }}" class="cart-block__btn cart-it-btn btn-default _razzmatazz"><span>ИТресное</span></a>
         </div>
 
         {{ record.content | raw }}

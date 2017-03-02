@@ -1,4 +1,4 @@
-1488189258a:1:{s:19:"interest_single.htm";a:10:{s:8:"fileName";s:19:"interest_single.htm";s:7:"content";s:2449:"title = "Итересная новость"
+1488425980a:1:{s:19:"interest_single.htm";a:10:{s:8:"fileName";s:19:"interest_single.htm";s:7:"content";s:2506:"title = "Итересная новость"
 url = "/interest/:slug"
 layout = "master"
 is_hidden = 0
@@ -43,7 +43,7 @@ notFoundMessage = "Записей не найдено"
           	<a data-hover="Предыдущая новость" href="/interest/{{ record.prevSlug }}" class="news-article-prev"></a>
           {% endif %}	
           </div>
-          <div class="news-article-nav__rowB"><a href="" class="news-article-backlink"><img src="{{ 'assets/img/home/t_arrow.svg'|theme }}"><span>Назад к фильтру</span></a></div>
+          <div class="news-article-nav__rowB"><a href="/interest/category/{{ record.category.slug }}" class="news-article-backlink"><img src="{{ 'assets/img/home/t_arrow.svg'|theme }}"><span>Назад к фильтру</span></a></div>
         </div>
       </div>
     </div>
@@ -52,7 +52,7 @@ notFoundMessage = "Записей не найдено"
 
 {% else %}
     {{ notFoundMessage }}
-{% endif %}";s:5:"mtime";i:1487734625;s:6:"markup";s:2150:"{% if record %}  
+{% endif %}";s:5:"mtime";i:1488425375;s:6:"markup";s:2195:"{% if record %}  
 
 
   
@@ -85,7 +85,7 @@ notFoundMessage = "Записей не найдено"
           	<a data-hover="Предыдущая новость" href="/interest/{{ record.prevSlug }}" class="news-article-prev"></a>
           {% endif %}	
           </div>
-          <div class="news-article-nav__rowB"><a href="" class="news-article-backlink"><img src="{{ 'assets/img/home/t_arrow.svg'|theme }}"><span>Назад к фильтру</span></a></div>
+          <div class="news-article-nav__rowB"><a href="/interest/category/{{ record.category.slug }}" class="news-article-backlink"><img src="{{ 'assets/img/home/t_arrow.svg'|theme }}"><span>Назад к фильтру</span></a></div>
         </div>
       </div>
     </div>
