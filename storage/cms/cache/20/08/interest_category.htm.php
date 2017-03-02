@@ -1,5 +1,5 @@
 <?php 
-use Timlis\News\Models\Tag;use Timlis\News\Models\Interest;class Cms58b7be91a5a25451912468_755753409Class extends \Cms\Classes\PageCode
+use Timlis\News\Models\Tag;use Timlis\News\Models\Interest;class Cms58b7e440ec7ac355249026_3960062469Class extends \Cms\Classes\PageCode
 {
 
 
@@ -11,26 +11,31 @@ public function onStart()
 	}
 public function onTest()
   {
-      $arr = array();
+      $tags = array();
+
+      $category = post('category');
 
       $first = post('first');
 
-      if($first != '') $arr[] = $first;
+      if($first != '') $tags[] = $first;
 
       $second = post('second');
 
-      if($second != '' && $second != $first) $arr[] = $second;
+      if($second != '' && $second != $first) $tags[] = $second;
 
       $third = post('third');
 
-      if($third != '' && $third != $first && $third != $second) $arr[] = $third;
-
-      //var_dump($arr);
+      if($third != '' && $third != $first && $third != $second) $tags[] = $third;
 
 
-      if(!empty($arr)){
+      if(!empty($tags)){
 
-        $this['records'] = Interest::get();
+        $this['records'] = Interest::where('category_id', $category)->whereHas('tags', function($q) use ($tags)
+        {
+            $q->whereIn('id', $tags);
+
+        })->get();
+
 
       }else{
 

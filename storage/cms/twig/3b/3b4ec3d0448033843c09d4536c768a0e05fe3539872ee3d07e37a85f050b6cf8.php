@@ -45,23 +45,25 @@ class __TwigTemplate_206f48e9173d04cab70209ce30907bd0df279b5627251cb50f773d19f71
             <div class=\"ist-head__container\">
               <h1 class=\"ist-head__h1\">ИТресное</h1>
               <form class=\"ist-filter\" data-request=\"onTest\" data-request-update=\"intresult:'#result'\">
+              <input name=\"category\" value=\"";
+        // line 18
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["category"] ?? null), "id", array()), "html", null, true);
+        echo "\" type=\"hidden\">
                 <div class=\"ist-filter__body\">
                   <select name=\"\" disabled>
-                    <option value=\"";
-        // line 20
-        echo twig_escape_filter($this->env, $this->getAttribute(($context["category"] ?? null), "slug", array()), "html", null, true);
-        echo "\">";
+                    <option value=\"\">";
+        // line 21
         echo twig_escape_filter($this->env, twig_upper_filter($this->env, $this->getAttribute(($context["category"] ?? null), "title", array())), "html", null, true);
         echo "</option>
                   </select>
                   <select name=\"first\">
                   <option value=\"\">-- ПЕРВЫЙ ФИЛЬТР --</option>
                   ";
-        // line 24
+        // line 25
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["tags"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["tag"]) {
-            // line 25
+            // line 26
             echo "                    <option value=\"";
             echo twig_escape_filter($this->env, $this->getAttribute($context["tag"], "id", array()), "html", null, true);
             echo "\">";
@@ -72,17 +74,17 @@ class __TwigTemplate_206f48e9173d04cab70209ce30907bd0df279b5627251cb50f773d19f71
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['tag'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 26
+        // line 27
         echo "\t  
                   </select>
                   <select name=\"second\">
                   <option value=\"\">-- ВТОРОЙ ФИЛЬТР --</option>
                   ";
-        // line 30
+        // line 31
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["tags"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["tag"]) {
-            // line 31
+            // line 32
             echo "                    <option value=\"";
             echo twig_escape_filter($this->env, $this->getAttribute($context["tag"], "id", array()), "html", null, true);
             echo "\">";
@@ -93,17 +95,17 @@ class __TwigTemplate_206f48e9173d04cab70209ce30907bd0df279b5627251cb50f773d19f71
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['tag'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 32
+        // line 33
         echo "\t  
                   </select>
                   <select name=\"third\">
                   <option value=\"\">-- ТРЕТИЙ ФИЛЬТР --</option>
                   ";
-        // line 36
+        // line 37
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["tags"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["tag"]) {
-            // line 37
+            // line 38
             echo "                    <option value=\"";
             echo twig_escape_filter($this->env, $this->getAttribute($context["tag"], "id", array()), "html", null, true);
             echo "\">";
@@ -114,7 +116,7 @@ class __TwigTemplate_206f48e9173d04cab70209ce30907bd0df279b5627251cb50f773d19f71
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['tag'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 38
+        // line 39
         echo "\t  
                   </select>
                 </div>
@@ -129,20 +131,20 @@ class __TwigTemplate_206f48e9173d04cab70209ce30907bd0df279b5627251cb50f773d19f71
           <div id=\"result\" class=\"ist-articles\">
 
 \t\t      ";
-        // line 51
+        // line 52
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["records"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["record"]) {
-            // line 52
+            // line 53
             echo "
           <div class=\"ist-article\">
 
           ";
-            // line 56
+            // line 57
             echo "
 
                 <div class=\"ist-article__colL\"><a href=\"/interest/";
-            // line 58
+            // line 59
             echo twig_escape_filter($this->env, $this->getAttribute($context["record"], "slug", array()), "html", null, true);
             echo "\" class=\"ist-article__link\"><img src=\"";
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["record"], "attachments", array()), "path", array()), "html", null, true);
@@ -150,19 +152,19 @@ class __TwigTemplate_206f48e9173d04cab70209ce30907bd0df279b5627251cb50f773d19f71
 
 
             <div class=\"ist-article__colR\"><a href=\"/interest/";
-            // line 61
+            // line 62
             echo twig_escape_filter($this->env, $this->getAttribute($context["record"], "slug", array()), "html", null, true);
             echo "\" class=\"ist-article__link\">
                 <h2 class=\"ist-article__h2\">";
-            // line 62
+            // line 63
             echo twig_escape_filter($this->env, $this->getAttribute($context["record"], "title", array()), "html", null, true);
             echo "</h2></a>
               <p class=\"ist-article__p\">";
-            // line 63
+            // line 64
             echo twig_escape_filter($this->env, strip_tags(call_user_func_array($this->env->getFunction('html_limit')->getCallable(), array("limit", $this->getAttribute($context["record"], "content", array()), 150))), "html", null, true);
             echo "</p>
               <div class=\"ist-article__date\">";
-            // line 64
+            // line 65
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["record"], "created_at", array()), "format", array(0 => "d.m.Y"), "method"), "html", null, true);
             echo "</div><a href=\"";
             echo twig_escape_filter($this->env, $this->getAttribute($context["record"], "link", array()), "html", null, true);
@@ -177,7 +179,7 @@ class __TwigTemplate_206f48e9173d04cab70209ce30907bd0df279b5627251cb50f773d19f71
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['record'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 68
+        // line 69
         echo "  
             
           </div>
@@ -192,10 +194,10 @@ class __TwigTemplate_206f48e9173d04cab70209ce30907bd0df279b5627251cb50f773d19f71
   crossorigin=\"anonymous\"></script>
 
     ";
-        // line 81
+        // line 82
         echo '<script src="'. Request::getBasePath()
                 .'/modules/system/assets/js/framework.js"></script>'.PHP_EOL;
-        // line 82
+        // line 83
         echo "
     <!-- /JS Bottom-->
   </body>
@@ -214,7 +216,7 @@ class __TwigTemplate_206f48e9173d04cab70209ce30907bd0df279b5627251cb50f773d19f71
 
     public function getDebugInfo()
     {
-        return array (  199 => 82,  196 => 81,  181 => 68,  166 => 64,  162 => 63,  158 => 62,  154 => 61,  146 => 58,  142 => 56,  137 => 52,  133 => 51,  118 => 38,  107 => 37,  103 => 36,  97 => 32,  86 => 31,  82 => 30,  76 => 26,  65 => 25,  61 => 24,  52 => 20,  40 => 10,  38 => 7,  33 => 8,  31 => 7,  27 => 5,  25 => 4,  23 => 3,  21 => 2,  19 => 1,);
+        return array (  201 => 83,  198 => 82,  183 => 69,  168 => 65,  164 => 64,  160 => 63,  156 => 62,  148 => 59,  144 => 57,  139 => 53,  135 => 52,  120 => 39,  109 => 38,  105 => 37,  99 => 33,  88 => 32,  84 => 31,  78 => 27,  67 => 26,  63 => 25,  56 => 21,  50 => 18,  40 => 10,  38 => 7,  33 => 8,  31 => 7,  27 => 5,  25 => 4,  23 => 3,  21 => 2,  19 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -244,9 +246,10 @@ class __TwigTemplate_206f48e9173d04cab70209ce30907bd0df279b5627251cb50f773d19f71
             <div class=\"ist-head__container\">
               <h1 class=\"ist-head__h1\">ИТресное</h1>
               <form class=\"ist-filter\" data-request=\"onTest\" data-request-update=\"intresult:'#result'\">
+              <input name=\"category\" value=\"{{ category.id }}\" type=\"hidden\">
                 <div class=\"ist-filter__body\">
                   <select name=\"\" disabled>
-                    <option value=\"{{ category.slug }}\">{{ category.title|upper }}</option>
+                    <option value=\"\">{{ category.title|upper }}</option>
                   </select>
                   <select name=\"first\">
                   <option value=\"\">-- ПЕРВЫЙ ФИЛЬТР --</option>

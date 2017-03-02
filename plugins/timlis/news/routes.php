@@ -11,8 +11,15 @@ use Timlis\News\Models\Interest;
 
 Route::get('testell', function(){
 
+	$tags = array(1, 2, 3);
 
-	return Tag::all()->with('interest');
+	$posts = Interest::where('category_id', 2)->whereHas('tags', function($q) use ($tags)
+	{
+	    $q->whereIn('id', $tags);
+
+	})->get();
+
+	return $posts;
 
 });
 

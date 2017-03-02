@@ -22,26 +22,31 @@ use Timlis\News\Models\Interest;
 
   function onTest()
   {
-      $arr = array();
+      $tags = array();
+
+      $category = post('category');
 
       $first = post('first');
 
-      if($first != '') $arr[] = $first;
+      if($first != '') $tags[] = $first;
 
       $second = post('second');
 
-      if($second != '' && $second != $first) $arr[] = $second;
+      if($second != '' && $second != $first) $tags[] = $second;
 
       $third = post('third');
 
-      if($third != '' && $third != $first && $third != $second) $arr[] = $third;
-
-      //var_dump($arr);
+      if($third != '' && $third != $first && $third != $second) $tags[] = $third;
 
 
-      if(!empty($arr)){
+      if(!empty($tags)){
 
-        $this['records'] = Interest::get();
+        $this['records'] = Interest::where('category_id', $category)->whereHas('tags', function($q) use ($tags)
+        {
+            $q->whereIn('id', $tags);
+
+        })->get();
+
 
       }else{
 
@@ -70,9 +75,10 @@ use Timlis\News\Models\Interest;
             <div class="ist-head__container">
               <h1 class="ist-head__h1">ИТресное</h1>
               <form class="ist-filter" data-request="onTest" data-request-update="intresult:'#result'">
+              <input name="category" value="{{ category.id }}" type="hidden">
                 <div class="ist-filter__body">
                   <select name="" disabled>
-                    <option value="{{ category.slug }}">{{ category.title|upper }}</option>
+                    <option value="">{{ category.title|upper }}</option>
                   </select>
                   <select name="first">
                   <option value="">-- ПЕРВЫЙ ФИЛЬТР --</option>
